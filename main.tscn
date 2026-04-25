@@ -1,3 +1,28 @@
 [gd_scene format=3 uid="uid://co5v5iwcklfyy"]
 
 [node name="Main" type="Node3D" unique_id=1943967489]
+
+[node name="Wall1" type="CSGBox3D" parent="." unique_id=925280361]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.011081457, 2.0675044, 2.43088)
+size = Vector3(4.3446045, 3.1395264, 0.2)
+
+[node name="Floor" type="CSGBox3D" parent="." unique_id=583094974]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.05842465, 0.67518723, 1.0761793)
+size = Vector3(4.2617188, 0.32824707, 2.913086)
+
+[node name="Wall2" type="CSGBox3D" parent="." unique_id=453488150]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00096678734, 2.0973663, -0.26621127)
+size = Vector3(4.3446045, 3.1395264, 0.21765137)
+
+[node name="Wall3" type="CSGBox3D" parent="Wall2" unique_id=1591976508]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.032789, -0.009578466, 1.3446877)
+size = Vector3(0.29066113, 3.1395264, 2.6000001)
+
+[node name="Doorway" type="CSGBox3D" parent="Wall2/Wall3" unique_id=668921705]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.066244125, -0.43778682, -0.12847638)
+operation = 2
+size = Vector3(0.6, 1.7, 0.90000004)
+
+[node name="Wall4" type="CSGBox3D" parent="." unique_id=1952771709]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9932206, 2.1087327, 1.0788549)
+size = Vector3(0.29066113, 3.1395264, 2.7)
