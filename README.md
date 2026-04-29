@@ -1,2 +1,0 @@
-# WhichWitchTrivia
-Maze trivia game
