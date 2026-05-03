@@ -6,3 +6,4 @@ Taryn/Bee Crosby
 Anna Olson
 
 Issues Encountered: 
+Anna: I had some trouble making sure everything was synchornized and creating a SQLite db
