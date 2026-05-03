@@ -1,15 +1,15 @@
 extends Node
 
-# Model: Handles the data and logic for the 3 types of quetions
+# Handles the data and logic for the 3 types of quetions
 # Question Types: Mulitple Choice, true/false, and short answer
 
 enum QuestionType {MULTIPLE_CHOICE, TRUE_FALSE, SHORT_ANSWER }
 
-var current_type = QuestionType.MULTIPLE_CHOICE
-var question_text: String = ""
-var correct_answer: String = "" # This would store the correct answer
-var options: Array = [] #Use this for multiple choice selections
+var myCurrentType = QuestionType.MULTIPLE_CHOICE
+var myQuestionText: String = "" # The question that the player would see
+var myCorrectAns: String = "" # This would store the correct answer
+var myOptions: Array = [] #Use this for multiple choice selections
 
-# Loads the data 
+# Loads the data from trivia database
 
-# Checks player's input
+# Checks player's answer (input) to see if it is correct 
