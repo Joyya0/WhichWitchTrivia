@@ -1,17 +1,20 @@
 [gd_scene format=3 uid="uid://cc8hmdctxr1p3"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ichvf"]
+albedo_color = Color(0.18175316, 0.41740033, 0.26867032, 1)
+
 [sub_resource type="BoxMesh" id="BoxMesh_ichvf"]
-size = Vector3(1, 1, 0.5)
+material = SubResource("StandardMaterial3D_ichvf")
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ichvf"]
-points = PackedVector3Array(0.5, 0.5, 0.25, 0.5, 0.5, -0.25, -0.5, 0.5, 0.25, 0.5, -0.5, 0.25, 0.5, -0.5, -0.25, -0.5, 0.5, -0.25, -0.5, -0.5, 0.25, -0.5, -0.5, -0.25)
+points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5)
 
 [node name="MeshLibrary" type="Node3D" unique_id=1727503607]
 
 [node name="Wall" type="MeshInstance3D" parent="." unique_id=2031051456]
 mesh = SubResource("BoxMesh_ichvf")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Wall" unique_id=1754506293]
+[node name="StaticBody3D" type="StaticBody3D" parent="Wall" unique_id=2114767916]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall/StaticBody3D" unique_id=1382745654]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall/StaticBody3D" unique_id=1828832362]
 shape = SubResource("ConvexPolygonShape3D_ichvf")
