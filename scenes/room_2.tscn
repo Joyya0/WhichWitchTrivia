@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://w2qnvayqx653"]
+
+[ext_resource type="MeshLibrary" uid="uid://nvyikvnoghwg" path="res://scenes/mesh-lib.meshlib" id="1_586c8"]
+
+[node name="Room2" type="Node" unique_id=400199147]
+
+[node name="Floor" type="CSGBox3D" parent="." unique_id=396667662]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.339999, 0)
+use_collision = true
+size = Vector3(20, 0.5, 20)
+
+[node name="GridMap" type="GridMap" parent="." unique_id=1734734923]
+mesh_library = ExtResource("1_586c8")
+cell_size = Vector3(1, 1.5, 1)
+metadata/_editor_floor_ = Vector3(0, -3, 0)

@@ -1,7 +1,10 @@
 [gd_scene format=3 uid="uid://co5v5iwcklfyy"]
 
 [ext_resource type="PackedScene" uid="uid://dxwao1qkto2tn" path="res://scenes/room_1.tscn" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://w2qnvayqx653" path="res://scenes/room_2.tscn" id="2_0wfyh"]
 
 [node name="Main" type="Node3D" unique_id=1943967489]
 
 [node name="Room1" parent="." unique_id=666238121 instance=ExtResource("1_o5qli")]
+
+[node name="Room2" parent="." unique_id=400199147 instance=ExtResource("2_0wfyh")]
