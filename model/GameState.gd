@@ -10,7 +10,7 @@ const TOTAL_ROOMS: int = 8
 # Save/Load Game Function 
 
 # If player gets a questions wrong they loose a life/health 
-func looseLife():
+func loseLife():
 	playerLives -= 1;
 	if playerLives <= 0:
 		isGameOver = true
