@@ -16,8 +16,14 @@ using GDscript.
 
 Iteration 2
 Issues Encountered:
+
 Anna:
 
 Francesca:
+I focused on finished the scripts for Door.gd and Question.gd. I also started working on
+writing the GameState.gd to handle the player's lives and scoring points. I also created and
+started working on a TestLogic script in order to double check that the code I have written is 
+working properly, but it is still a work in progress. With the TestLogic.gd I want to make sure 
+that the player's answers aren't case sensitive and that the doors lock right. 
 
 Taryn/Bee: 

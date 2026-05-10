@@ -11,5 +11,4 @@ func getDoor(doorIndex: int):
 	
 # Checks if all the doors in the room are permanetly locked 
 # If only ONE door is permanently closed play is still not fully trapped 
-		
 	
