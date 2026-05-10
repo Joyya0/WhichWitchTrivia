@@ -13,3 +13,10 @@ var myOptions: Array = [] #Use this for multiple choice selections
 # Loads the data from trivia database
 
 # Checks player's answer (input) to see if it is correct 
+func checkAnswer(playerInput: String) -> bool:
+	# Checks to see if the input matches the correct answer
+	# Use .to_lower() to ignore capital letters (ignoring case sensitvity) 
+	if playerInput.to_lower()  == myCorrectAns.to_lower():
+		return true
+	else:
+		return false
