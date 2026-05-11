@@ -7,6 +7,7 @@ Anna Olson
 
 Iteration 1: 
 Issues Encountered: 
+
 Anna: I had some trouble making sure everything was synchornized and creating a SQLite db
 
 Francesca: Had some troubles syncing the folders on GitHub into Godot, but with some time 
