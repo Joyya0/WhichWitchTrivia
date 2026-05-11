@@ -28,3 +28,4 @@ working properly, but it is still a work in progress. With the TestLogic.gd I wa
 that the player's answers aren't case sensitive and that the doors lock right. 
 
 Taryn/Bee: 
+Responsible for the game's colors and movement. They designed the project's color palette and created the animations for the sprites.
