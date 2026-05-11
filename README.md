@@ -18,7 +18,9 @@ using GDscript.
 Iteration 2
 Issues Encountered:
 
-Anna:
+Anna: I worked on getting the maze model started, as our current goal is to have 8 mazes (levels)
+for the player to traverse. I was able to use godot to set up a grig that mazes can be fairly easily 
+designed on for each level.
 
 Francesca:
 I focused on finished the scripts for Door.gd and Question.gd. I also started working on
