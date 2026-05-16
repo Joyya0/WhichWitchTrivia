@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cc8hmdctxr1p3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ichvf"]
-albedo_color = Color(0.18175316, 0.41740033, 0.26867032, 1)
+albedo_color = Color(0.23426375, 0.4096172, 0.22549492, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_ichvf"]
 material = SubResource("StandardMaterial3D_ichvf")
@@ -9,12 +9,48 @@ material = SubResource("StandardMaterial3D_ichvf")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ichvf"]
 points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g2w8g"]
+albedo_color = Color(0.45211, 0.7473687, 0.60191196, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_jo043"]
+material = SubResource("StandardMaterial3D_g2w8g")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t7hg2"]
+albedo_color = Color(0.86716044, 0.45117837, 0.9030115, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_g2w8g"]
+material = SubResource("StandardMaterial3D_t7hg2")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jo043"]
+albedo_color = Color(0.59909177, 0.0002625051, 0.5991464, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_pcong"]
+material = SubResource("StandardMaterial3D_jo043")
+
 [node name="MeshLibrary" type="Node3D" unique_id=1727503607]
 
 [node name="Wall" type="MeshInstance3D" parent="." unique_id=2031051456]
+visible = false
 mesh = SubResource("BoxMesh_ichvf")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Wall" unique_id=2114767916]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Wall/StaticBody3D" unique_id=1828832362]
+shape = SubResource("ConvexPolygonShape3D_ichvf")
+
+[node name="Door" type="MeshInstance3D" parent="." unique_id=1032406649]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.8, 0, 0, 0)
+mesh = SubResource("BoxMesh_jo043")
+
+[node name="DoorWay" type="MeshInstance3D" parent="Door" unique_id=488629104]
+transform = Transform3D(0.48000002, 0, 0, 0, 0.68039995, 0, 0, 0, -0.13000003, -2.9802322e-08, -0.16000001, 0.48)
+mesh = SubResource("BoxMesh_g2w8g")
+
+[node name="Knob" type="MeshInstance3D" parent="Door/DoorWay" unique_id=1166738156]
+transform = Transform3D(0.107999995, 0, 0, 0, 0.07999998, 0, 0, 0, 0.50399995, -0.39583334, 0, -0.46153808)
+mesh = SubResource("BoxMesh_pcong")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Door" unique_id=675265857]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Door/StaticBody3D" unique_id=1711082175]
 shape = SubResource("ConvexPolygonShape3D_ichvf")
