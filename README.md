@@ -31,3 +31,12 @@ that the player's answers aren't case sensitive and that the doors lock right.
 
 Taryn/Bee: 
 Responsible for the game's colors and movement. They designed the project's color palette and created the animations for the sprites.
+
+Iteration 3
+
+Issues Encountered:
+
+Anna: I worked on the player movement and camera, I was working on making a model for the door 
+but had trouble getting it to appear correctly.
+Francesca:
+Taryn/Bee:
