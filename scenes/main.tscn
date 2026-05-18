@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dxwao1qkto2tn" path="res://scenes/room_1.tscn" id="1_o5qli"]
 [ext_resource type="PackedScene" uid="uid://w2qnvayqx653" path="res://scenes/room_2.tscn" id="2_0wfyh"]
-[ext_resource type="Script" uid="uid://chw38lrevyef0" path="res://controller/Player.gd" id="3_sugp2"]
+[ext_resource type="Script" path="res://controller/Player.gd" id="3_sugp2"]
 [ext_resource type="Texture2D" uid="uid://g7kckxuhqq76" path="res://textures/gobbo_bean_texture.png" id="4_jyhfs"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0wfyh"]
