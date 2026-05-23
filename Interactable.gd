@@ -1,4 +1,4 @@
-extends StaticBody3D
+extends MeshInstance3D
 
 @export_file("*.tscn")
 var next_room_scene : String

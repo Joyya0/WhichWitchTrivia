@@ -30,6 +30,7 @@ mesh = SubResource("BoxMesh_ichvf")
 shape = SubResource("ConvexPolygonShape3D_t7hg2")
 
 [node name="Door" type="MeshInstance3D" parent="." unique_id=519570615]
+visible = false
 mesh = SubResource("BoxMesh_g2w8g")
 script = ExtResource("1_t7hg2")
 next_room_scene = "uid://w2qnvayqx653"
