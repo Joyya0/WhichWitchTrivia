@@ -9,6 +9,7 @@ var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var neck := $Neck
 @onready var camera := $Neck/Camera3D
 @onready var raycast := $Neck/Camera3D/RayCast3D
+@onready var prompt = $"../InteractLabel"
 
 var can_move := true
 
@@ -52,9 +53,12 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _process(delta):
 	if Input.is_action_just_pressed("interact"):
-
 		if raycast.is_colliding():
 			var collider = raycast.get_collider()
-
 			if collider.has_method("interact"):
 				collider.interact()
+				prompt.visible = true
+			else:
+				prompt.visible = false
+		else:
+			prompt.visible = false

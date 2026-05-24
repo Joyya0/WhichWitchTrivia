@@ -3,7 +3,9 @@
 [ext_resource type="MeshLibrary" uid="uid://34ff2r6bgbst" path="res://scenes/mesh_lib.meshlib" id="1_0tsjr"]
 [ext_resource type="Script" uid="uid://chw38lrevyef0" path="res://controller/Player.gd" id="2_8oql1"]
 [ext_resource type="Texture2D" uid="uid://g7kckxuhqq76" path="res://textures/gobbo_bean_texture.png" id="3_xhekj"]
-[ext_resource type="Script" uid="uid://bke6segaoxx05" path="res://Interactable.gd" id="4_xhekj"]
+[ext_resource type="Script" uid="uid://u70jldm8mgg3" path="res://model/Door.gd" id="4_xhekj"]
+[ext_resource type="Script" uid="uid://6c6a8eouaqu8" path="res://view/QuestionUI.gd" id="5_0akh5"]
+[ext_resource type="Script" uid="uid://ynni1c8rclvu" path="res://view/InteractUI.gd" id="6_d0u7m"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_irjyx"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -83,6 +85,7 @@ fov = 64.68749
 
 [node name="RayCast3D" type="RayCast3D" parent="CharacterBody3D/Neck/Camera3D" unique_id=138523162]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.13999999)
+target_position = Vector3(0, 0, -4)
 
 [node name="Door" type="MeshInstance3D" parent="." unique_id=1140971890]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, -3.75, -9.509999)
@@ -94,3 +97,9 @@ next_room_scene = "uid://w2qnvayqx653"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Door/StaticBody3D" unique_id=1833250687]
 shape = SubResource("ConvexPolygonShape3D_0akh5")
+
+[node name="TriviaUI" type="CanvasLayer" parent="." unique_id=979811069]
+script = ExtResource("5_0akh5")
+
+[node name="InteractLabel" type="CanvasLayer" parent="." unique_id=923504786]
+script = ExtResource("6_d0u7m")

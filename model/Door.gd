@@ -1,10 +1,20 @@
-extends Node
+extends MeshInstance3D
 
 # Represents the states of a door in the room 
 # Connected the relationship between the door and question 
 
+
 enum DoorStatus { LOCKED, OPEN, PERM_CLOSED}
 var myCurrentStatus = DoorStatus.LOCKED # Tracks status of door (open or locked)
+@export_file("*.tscn")
+var next_room_scene : String
+
+func interact():
+	print("Door interacted!")
+	var trivia_ui = get_tree().get_first_node_in_group("trivia")
+
+	if trivia_ui:
+		trivia_ui.show_question(next_room_scene)
 
 # Check status of door  
 # if door is locked permanently -> boolean type (True or False)
