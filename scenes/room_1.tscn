@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://chw38lrevyef0" path="res://controller/Player.gd" id="2_8oql1"]
 [ext_resource type="Texture2D" uid="uid://g7kckxuhqq76" path="res://textures/gobbo_bean_texture.png" id="3_xhekj"]
 [ext_resource type="Script" uid="uid://u70jldm8mgg3" path="res://model/Door.gd" id="4_xhekj"]
-[ext_resource type="Script" uid="uid://6c6a8eouaqu8" path="res://view/QuestionUI.gd" id="5_0akh5"]
+[ext_resource type="Script" uid="uid://6c6a8eouaqu8" path="res://view/TriviaUI.gd" id="5_0akh5"]
 [ext_resource type="Script" uid="uid://ynni1c8rclvu" path="res://view/InteractUI.gd" id="6_d0u7m"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_irjyx"]
@@ -101,5 +101,41 @@ shape = SubResource("ConvexPolygonShape3D_0akh5")
 [node name="TriviaUI" type="CanvasLayer" parent="." unique_id=979811069]
 script = ExtResource("5_0akh5")
 
+[node name="Panel" type="Panel" parent="TriviaUI" unique_id=1483626536]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="QuestionLabel" type="Label" parent="TriviaUI/Panel" unique_id=985959626]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Answer1" type="Button" parent="TriviaUI/Panel" unique_id=1213641523]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Answer2" type="Button" parent="TriviaUI/Panel" unique_id=1489263600]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Answer3" type="Button" parent="TriviaUI/Panel" unique_id=1213601589]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Answer4" type="Button" parent="TriviaUI/Panel" unique_id=134119214]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
 [node name="InteractLabel" type="CanvasLayer" parent="." unique_id=923504786]
 script = ExtResource("6_d0u7m")
+
+[node name="Label" type="Label" parent="InteractLabel" unique_id=1383898280]
+offset_left = -592.0
+offset_top = -1460.0
+offset_right = -529.0
+offset_bottom = -1437.0
+text = "Press 'E'"
