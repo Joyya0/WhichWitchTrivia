@@ -38,5 +38,7 @@ Issues Encountered:
 
 Anna: I worked on the player movement and camera, I was working on making a model for the door 
 but had trouble getting it to appear correctly.
-Francesca:
+
+Francesca: Researched esoterica and iconic pop culture wizards to brainstorm what  trivia questions to create for the game. Also continued working on my Test script. 
+
 Taryn/Bee:
