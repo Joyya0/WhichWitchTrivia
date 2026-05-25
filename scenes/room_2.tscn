@@ -2,7 +2,26 @@
 
 [ext_resource type="MeshLibrary" uid="uid://34ff2r6bgbst" path="res://scenes/mesh_lib.meshlib" id="1_586c8"]
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_586c8"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_sugp2"]
+sky_material = SubResource("ProceduralSkyMaterial_586c8")
+
+[sub_resource type="Environment" id="Environment_w0ydv"]
+background_mode = 2
+sky = SubResource("Sky_sugp2")
+tonemap_mode = 2
+
 [node name="Room2" type="Node" unique_id=400199147]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1671366787]
+environment = SubResource("Environment_w0ydv")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=338344300]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
 
 [node name="Floor" type="CSGBox3D" parent="." unique_id=396667662]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0)
