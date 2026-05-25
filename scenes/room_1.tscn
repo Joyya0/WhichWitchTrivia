@@ -91,33 +91,53 @@ target_position = Vector3(0, 0, -4)
 script = ExtResource("5_0akh5")
 
 [node name="Panel" type="Panel" parent="TriviaUI" unique_id=1483626536]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 174.0
+offset_top = 107.0
+offset_right = 574.0
+offset_bottom = 357.0
 
 [node name="QuestionLabel" type="Label" parent="TriviaUI/Panel" unique_id=985959626]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 19.0
+offset_right = 20.0
+offset_bottom = 42.0
+grow_horizontal = 2
 
 [node name="Answer1" type="Button" parent="TriviaUI/Panel" unique_id=1213641523]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 30.0
+offset_top = -45.0
+offset_right = 38.0
+offset_bottom = -37.0
+grow_vertical = 2
 
 [node name="Answer2" type="Button" parent="TriviaUI/Panel" unique_id=1489263600]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 30.0
+offset_top = 120.0
+offset_right = 38.0
+offset_bottom = 128.0
 
 [node name="Answer3" type="Button" parent="TriviaUI/Panel" unique_id=1213601589]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 30.0
+offset_top = 160.0
+offset_right = 38.0
+offset_bottom = 168.0
 
 [node name="Answer4" type="Button" parent="TriviaUI/Panel" unique_id=134119214]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 30.0
+offset_top = 200.0
+offset_right = 38.0
+offset_bottom = 208.0
 
 [node name="InteractLabel" type="CanvasLayer" parent="." unique_id=923504786]
 script = ExtResource("6_d0u7m")
