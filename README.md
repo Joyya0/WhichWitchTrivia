@@ -42,3 +42,12 @@ but had trouble getting it to appear correctly.
 Francesca: Researched esoterica and iconic pop culture wizards to brainstorm what  trivia questions to create for the game. Also continued working on my Test script. 
 
 Taryn/Bee:
+
+Iteration 4:
+
+Anna: 
+
+Francesca: Added three more maze rooms, continued to brainstorm trivia questions, and came across a Git merge conflict which I resolved in order to keep our teams
+branch stabled and aligned. 
+
+Taryn/Bee:
