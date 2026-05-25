@@ -45,7 +45,8 @@ Taryn/Bee:
 
 Iteration 4:
 
-Anna: 
+Anna: Added another maze room, mostly worked on player/door interaction to begin trivia and advance to the next room. Also started on the 
+question/trivia ui needed.
 
 Francesca: Added three more maze rooms, continued to brainstorm trivia questions, and came across a Git merge conflict which I resolved in order to keep our teams
 branch stabled and aligned. 
