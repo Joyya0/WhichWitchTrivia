@@ -41,7 +41,7 @@ but had trouble getting it to appear correctly.
 
 Francesca: Researched esoterica and iconic pop culture wizards to brainstorm what  trivia questions to create for the game. Also continued working on my Test script. 
 
-Taryn/Bee:
+Taryn/Bee: Continued to work on art and animations after original pass's files corrupted.
 
 Iteration 4:
 
@@ -51,4 +51,4 @@ question/trivia ui needed.
 Francesca: Added three more maze rooms, continued to brainstorm trivia questions, and came across a Git merge conflict which I resolved in order to keep our teams
 branch stabled and aligned. 
 
-Taryn/Bee:
+Taryn/Bee: Worked on designing textures for the walls, began composing music.
