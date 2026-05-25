@@ -1,4 +1,4 @@
-extends MeshInstance3D
+extends StaticBody3D
 
 # Represents the states of a door in the room 
 # Connected the relationship between the door and question 

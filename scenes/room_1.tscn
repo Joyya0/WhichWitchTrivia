@@ -87,17 +87,6 @@ fov = 64.68749
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.13999999)
 target_position = Vector3(0, 0, -4)
 
-[node name="Door" type="MeshInstance3D" parent="." unique_id=1140971890]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, -3.75, -9.509999)
-mesh = SubResource("BoxMesh_irjyx")
-script = ExtResource("4_xhekj")
-next_room_scene = "uid://w2qnvayqx653"
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Door" unique_id=815058179]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Door/StaticBody3D" unique_id=1833250687]
-shape = SubResource("ConvexPolygonShape3D_0akh5")
-
 [node name="TriviaUI" type="CanvasLayer" parent="." unique_id=979811069]
 script = ExtResource("5_0akh5")
 
@@ -139,3 +128,15 @@ offset_top = -1460.0
 offset_right = -529.0
 offset_bottom = -1437.0
 text = "Press 'E'"
+
+[node name="Door" type="Node3D" parent="." unique_id=351805582]
+
+[node name="Mesh" type="MeshInstance3D" parent="Door" unique_id=1140971890]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, -3.75, -9.509999)
+mesh = SubResource("BoxMesh_irjyx")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Door/Mesh" unique_id=815058179]
+script = ExtResource("4_xhekj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Door/Mesh/StaticBody3D" unique_id=1833250687]
+shape = SubResource("ConvexPolygonShape3D_0akh5")
