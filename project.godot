@@ -11,18 +11,24 @@ config_version=5
 [application]
 
 config/name="WhichWitch"
-run/main_scene="uid://co5v5iwcklfyy"
+run/main_scene="uid://dxwao1qkto2tn"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 GameState="*uid://dmol2xoq53ntf"
+QuestionManager="*uid://bc4eljx6e4org"
+TriviaUi="*uid://6c6a8eouaqu8"
 
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot-sqlite/plugin.cfg")
 
 [input]
 

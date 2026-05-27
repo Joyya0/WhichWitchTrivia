@@ -96,7 +96,7 @@ offset_top = 107.0
 offset_right = 574.0
 offset_bottom = 357.0
 
-[node name="QuestionLabel" type="Label" parent="TriviaUI/Panel" unique_id=985959626]
+[node name="MCContainer" type="Label" parent="TriviaUI/Panel" unique_id=985959626]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
