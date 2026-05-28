@@ -7,10 +7,10 @@ extends CanvasLayer
 @onready var short_answer_container = $Panel/SAContainer
 
 # Multiple choice buttons
-@onready var button1 = $Panel/Answer1
-@onready var button2 = $Panel/Answer2
-@onready var button3 = $Panel/Answer3
-@onready var button4 = $Panel/Answer4
+@onready var button1 = $Panel/MCContainer/Answer1
+@onready var button2 = $Panel/MCContainer/Answer2
+@onready var button3 = $Panel/MCContainer/Answer3
+@onready var button4 = $Panel/MCContainer/Answer4
 
 var current_question
 var next_room = ""

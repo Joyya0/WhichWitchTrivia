@@ -19,7 +19,6 @@ config/icon="res://icon.svg"
 
 GameState="*uid://dmol2xoq53ntf"
 QuestionManager="*uid://bc4eljx6e4org"
-TriviaUi="*uid://6c6a8eouaqu8"
 
 [display]
 
