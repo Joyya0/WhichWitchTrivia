@@ -10,7 +10,6 @@ extends CanvasLayer
 @onready var button1 = $Panel/MCContainer/Answer1
 @onready var button2 = $Panel/MCContainer/Answer2
 @onready var button3 = $Panel/MCContainer/Answer3
-@onready var button4 = $Panel/MCContainer/Answer4
 
 var current_question
 var next_room = ""
@@ -24,7 +23,6 @@ func _ready():
 	button1.pressed.connect(func(): answer_selected(0))
 	button2.pressed.connect(func(): answer_selected(1))
 	button3.pressed.connect(func(): answer_selected(2))
-	button4.pressed.connect(func(): answer_selected(3))
 
 
 func show_question(question_data, room_path = ""):
@@ -50,7 +48,6 @@ func show_question(question_data, room_path = ""):
 			button1.text = current_question["option1"]
 			button2.text = current_question["option2"]
 			button3.text = current_question["option3"]
-			button4.text = current_question["option4"]
 
 		"tf":
 
@@ -79,8 +76,6 @@ func answer_selected(index):
 			selected_answer = button2.text
 		2:
 			selected_answer = button3.text
-		3:
-			selected_answer = button4.text
 
 	if selected_answer == current_question["answer"]:
 

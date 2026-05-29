@@ -1,6 +1,11 @@
 [gd_scene format=3 uid="uid://w2qnvayqx653"]
 
 [ext_resource type="MeshLibrary" uid="uid://34ff2r6bgbst" path="res://scenes/mesh_lib.meshlib" id="1_586c8"]
+[ext_resource type="Script" uid="uid://chw38lrevyef0" path="res://controller/Player.gd" id="2_63qte"]
+[ext_resource type="Texture2D" uid="uid://g7kckxuhqq76" path="res://textures/gobbo_bean_texture.png" id="3_flmds"]
+[ext_resource type="Script" uid="uid://6c6a8eouaqu8" path="res://view/TriviaUI.gd" id="4_hbe2o"]
+[ext_resource type="Script" uid="uid://ynni1c8rclvu" path="res://view/InteractUI.gd" id="5_guunk"]
+[ext_resource type="Script" uid="uid://u70jldm8mgg3" path="res://model/Door.gd" id="6_u14ju"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_586c8"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -13,6 +18,28 @@ sky_material = SubResource("ProceduralSkyMaterial_586c8")
 background_mode = 2
 sky = SubResource("Sky_sugp2")
 tonemap_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t7hg2"]
+albedo_color = Color(0.5307964, 0.26066008, 0.32758093, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_8hpol"]
+material = SubResource("StandardMaterial3D_t7hg2")
+size = Vector3(1, 2, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_00i1e"]
+points = PackedVector3Array(-0.4999208, -0.98508894, -0.5, 0.4999784, 0.954305, 0.5, 0.5, 0.9543469, -0.48414865, -0.4999208, 0.98508894, -0.5, -0.4840494, -0.954305, 0.5, 0.5, -0.9543469, -0.48414865, -0.4840494, 0.954305, 0.5, 0.4999784, -0.954305, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_63qte"]
+albedo_color = Color(0.32506025, 0.53838396, 0.7169085, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_flmds"]
+material = SubResource("StandardMaterial3D_63qte")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hbe2o"]
+albedo_texture = ExtResource("3_flmds")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_guunk"]
+points = PackedVector3Array(-0.12520654, -0.532801, -0.4805069, 0.022783129, 0.4760704, 0.49888408, 0.16971254, 0.5591441, 0.46417162, 0.23105091, -0.8035912, 0.32045516, 0.40741014, 0.651043, -0.24352328, -0.4827893, 0.59484255, 0.082213186, -0.3628679, -0.68231165, 0.2896967, 0.46904355, -0.65452886, -0.06627126, -0.12744367, 0.8427015, -0.33810276, -0.39343542, -0.6839421, -0.24471663, 0.43825462, 0.62330925, 0.20084947, 0.0841477, 0.977454, 0.11479468, -0.06820232, -0.9764576, -0.12927033, 0.20054972, -0.56312895, -0.4514544, -0.18552664, 0.59545326, -0.4534751, -0.27336287, 0.59226835, 0.40775412, -0.0069364863, -0.47682306, 0.49966025, 0.37582088, -0.5886136, 0.31695515, 0.111579016, 0.5630594, -0.48117727, -0.41725034, 0.5278656, -0.27049688, -0.48454633, -0.59697217, -0.06650971, -0.27974695, 0.90856135, 0.05333608, -0.25019687, -0.8807117, 0.20531891, 0.263647, -0.90277094, -0.1273943, 0.29336792, 0.8715263, -0.15719566, 0.3734115, -0.5263189, -0.32824618, 0.4996626, 0.47664148, -0.0068885577, 0.053105574, 0.8750009, 0.32470253, -0.15454252, -0.5908538, 0.4658794, -0.09727988, -0.7823577, -0.39818847, -0.3876489, -0.49817133, 0.31564978, -0.30067965, -0.58799505, -0.38890144)
 
 [node name="Room2" type="Node" unique_id=400199147]
 
@@ -32,6 +59,153 @@ size = Vector3(20, 0.5, 20)
 mesh_library = ExtResource("1_586c8")
 cell_size = Vector3(1, 1.5, 1)
 data = {
-"cells": PackedInt32Array(-131082, 65526, 0, -131082, 65527, 0, -131082, 65528, 0, -131082, 65529, 0, -131082, 65530, 0, -131082, 65531, 0, -131082, 65532, 0, -131082, 65533, 0, -131082, 65534, 0, -131082, 65535, 0, -131082, 0, 0, -131082, 1, 0, -131082, 2, 0, -131082, 3, 0, -131082, 4, 0, -131082, 5, 0, -131082, 6, 0, -131082, 7, 0, -131082, 8, 0, -131082, 9, 0, -131081, 9, 0, -131080, 9, 0, -131079, 9, 0, -131078, 9, 0, -131077, 9, 0, -131076, 9, 0, -131075, 9, 0, -131074, 9, 0, -131073, 9, 0, -196608, 9, 0, -196607, 9, 0, -196606, 9, 0, -196605, 9, 0, -196604, 9, 0, -196603, 9, 0, -196602, 9, 0, -196601, 9, 0, -196600, 9, 0, -196599, 9, 0, -196599, 65526, 0, -196599, 65527, 0, -196599, 65528, 0, -196599, 65529, 0, -196599, 65530, 0, -196599, 65531, 0, -196599, 65532, 0, -196599, 65533, 0, -196599, 65534, 0, -196599, 65535, 0, -196599, 0, 0, -196599, 1, 0, -196599, 2, 0, -196599, 3, 0, -196599, 4, 0, -196599, 5, 0, -196599, 6, 0, -196599, 7, 0, -196599, 8, 0, -131081, 65526, 0, -131080, 65526, 0, -131079, 65526, 0, -131078, 65526, 0, -131077, 65526, 0, -131076, 65526, 0, -131075, 65526, 0, -131074, 65526, 0, -131073, 65526, 0, -196608, 65526, 0, -196607, 65526, 0, -196606, 65526, 0, -196605, 65526, 0, -196600, 65526, 0, -196601, 65526, 0, -196602, 65526, 0, -196603, 65526, 0, -196604, 65526, 0, -131079, 65527, 0, -131079, 65528, 0, -131079, 65529, 0, -131079, 65532, 0, -131079, 65533, 0, -131079, 65534, 0, -131079, 65535, 0, -131079, 0, 0, -131079, 3, 0, -131079, 4, 0, -131079, 5, 0, -131079, 6, 0, -131078, 6, 0, -131077, 6, 0, -131076, 6, 0, -131073, 6, 0, -196608, 6, 0, -196607, 6, 0, -196602, 6, 0, -196603, 6, 0, -196604, 6, 0, -196602, 5, 0, -196602, 4, 0, -196602, 3, 0, -196602, 0, 0, -196602, 65535, 0, -131076, 65527, 0, -131076, 65528, 0, -131076, 65529, 0, -131076, 65530, 0, -131076, 65531, 0, -131076, 65532, 0, -131076, 0, 0, -131076, 1, 0, -131076, 2, 0, -131076, 3, 0, -196604, 65527, 0, -196604, 65528, 0, -196604, 65529, 0, -196604, 65530, 0, -196600, 65529, 0, -196601, 65529, 0, -196604, 65531, 0, -196607, 5, 0, -196607, 4, 0, -196607, 3, 0, -196607, 2, 0, -196607, 1, 0, -196607, 0, 0, -196603, 3, 0, -196604, 3, 0, -131075, 3, 0, -131074, 3, 0, -131073, 3, 0, -196608, 3, 0, -196608, 0, 0, -131073, 0, 0, -131073, 65529, 0, -196608, 65529, 0, -196607, 65529, 0, -131073, 65530, 0, -131073, 65531, 0, -131073, 65532, 0, -196608, 65532, 0, -196607, 65532, 0, -196603, 65535, 0, -196604, 65535, 0, -196602, 65534, 0, -196607, 65535, 0, -131078, 65532, 0, -131077, 65532, 0, -131073, 7, 0, -131073, 8, 0, -196601, 0, 0, -196600, 0, 0, -196607, 65527, 0, -196607, 65528, 0, -131080, 3, 0, -131081, 3, 0, -196601, 5, 0, -196600, 5, 0, -131076, 65535, 0)
+"cells": PackedInt32Array(-131082, 65526, 0, -131082, 65527, 0, -131082, 65528, 0, -131082, 65529, 0, -131082, 65530, 0, -131082, 65531, 0, -131082, 65532, 0, -131082, 65533, 0, -131082, 65534, 0, -131082, 65535, 0, -131082, 0, 0, -131082, 1, 0, -131082, 2, 0, -131082, 3, 0, -131082, 4, 0, -131082, 5, 0, -131082, 6, 0, -131082, 7, 0, -131082, 8, 0, -131082, 9, 0, -131081, 9, 0, -131080, 9, 0, -131079, 9, 0, -131078, 9, 0, -131077, 9, 0, -131076, 9, 0, -131075, 9, 0, -131074, 9, 0, -131073, 9, 0, -196608, 9, 0, -196607, 9, 0, -196606, 9, 0, -196605, 9, 0, -196604, 9, 0, -196603, 9, 0, -196602, 9, 0, -196601, 9, 0, -196600, 9, 0, -196599, 9, 0, -196599, 65526, 0, -196599, 65527, 0, -196599, 65528, 0, -196599, 65529, 0, -196599, 65530, 0, -196599, 65531, 0, -196599, 65532, 0, -196599, 65533, 0, -196599, 65534, 0, -196599, 65535, 0, -196599, 0, 0, -196599, 1, 0, -196599, 2, 0, -196599, 3, 0, -196599, 4, 0, -196599, 5, 0, -196599, 6, 0, -196599, 7, 0, -196599, 8, 0, -131081, 65526, 0, -131079, 65526, 0, -131078, 65526, 0, -131077, 65526, 0, -131076, 65526, 0, -131075, 65526, 0, -131074, 65526, 0, -131073, 65526, 0, -196608, 65526, 0, -196607, 65526, 0, -196606, 65526, 0, -196605, 65526, 0, -196600, 65526, 0, -196601, 65526, 0, -196602, 65526, 0, -196603, 65526, 0, -196604, 65526, 0, -131079, 65527, 0, -131079, 65528, 0, -131079, 65529, 0, -131079, 65532, 0, -131079, 65533, 0, -131079, 65534, 0, -131079, 65535, 0, -131079, 0, 0, -131079, 3, 0, -131079, 4, 0, -131079, 5, 0, -131079, 6, 0, -131078, 6, 0, -131077, 6, 0, -131076, 6, 0, -131073, 6, 0, -196608, 6, 0, -196607, 6, 0, -196602, 6, 0, -196603, 6, 0, -196604, 6, 0, -196602, 5, 0, -196602, 4, 0, -196602, 3, 0, -196602, 0, 0, -196602, 65535, 0, -131076, 65527, 0, -131076, 65528, 0, -131076, 65529, 0, -131076, 65530, 0, -131076, 65531, 0, -131076, 65532, 0, -131076, 0, 0, -131076, 1, 0, -131076, 2, 0, -131076, 3, 0, -196604, 65527, 0, -196604, 65528, 0, -196604, 65529, 0, -196604, 65530, 0, -196600, 65529, 0, -196601, 65529, 0, -196604, 65531, 0, -196607, 5, 0, -196607, 4, 0, -196607, 3, 0, -196607, 2, 0, -196607, 1, 0, -196607, 0, 0, -196603, 3, 0, -196604, 3, 0, -131075, 3, 0, -131074, 3, 0, -131073, 3, 0, -196608, 3, 0, -196608, 0, 0, -131073, 0, 0, -131073, 65529, 0, -196608, 65529, 0, -196607, 65529, 0, -131073, 65530, 0, -131073, 65531, 0, -131073, 65532, 0, -196608, 65532, 0, -196607, 65532, 0, -196603, 65535, 0, -196604, 65535, 0, -196602, 65534, 0, -196607, 65535, 0, -131078, 65532, 0, -131077, 65532, 0, -131073, 7, 0, -131073, 8, 0, -196601, 0, 0, -196600, 0, 0, -196607, 65527, 0, -196607, 65528, 0, -131080, 3, 0, -131081, 3, 0, -196601, 5, 0, -196600, 5, 0, -131076, 65535, 0)
 }
 metadata/_editor_floor_ = Vector3(0, -3, 0)
+
+[node name="TriviaUI" type="CanvasLayer" parent="." unique_id=767890137]
+script = ExtResource("4_hbe2o")
+
+[node name="Panel" type="Panel" parent="TriviaUI" unique_id=862939642]
+offset_left = 174.0
+offset_top = 107.0
+offset_right = 574.0
+offset_bottom = 357.0
+
+[node name="MCContainer" type="Label" parent="TriviaUI/Panel" unique_id=972105174]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 19.0
+offset_right = 20.0
+offset_bottom = 42.0
+grow_horizontal = 2
+
+[node name="Answer1" type="Button" parent="TriviaUI/Panel/MCContainer" unique_id=1643904509]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = 49.5
+offset_right = -142.0
+offset_bottom = 57.5
+grow_vertical = 2
+
+[node name="Answer2" type="Button" parent="TriviaUI/Panel/MCContainer" unique_id=1597706022]
+layout_mode = 0
+offset_left = -150.0
+offset_top = 101.0
+offset_right = -142.0
+offset_bottom = 109.0
+
+[node name="Answer3" type="Button" parent="TriviaUI/Panel/MCContainer" unique_id=1004214338]
+layout_mode = 0
+offset_left = -150.0
+offset_top = 141.0
+offset_right = -142.0
+offset_bottom = 149.0
+
+[node name="TFContainer" type="Label" parent="TriviaUI/Panel" unique_id=1629224351]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 19.0
+offset_right = 20.0
+offset_bottom = 42.0
+grow_horizontal = 2
+
+[node name="Answer1" type="Button" parent="TriviaUI/Panel/TFContainer" unique_id=530713243]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = 49.5
+offset_right = -142.0
+offset_bottom = 57.5
+grow_vertical = 2
+text = "True"
+
+[node name="Answer2" type="Button" parent="TriviaUI/Panel/TFContainer" unique_id=1452753964]
+layout_mode = 0
+offset_left = -150.0
+offset_top = 101.0
+offset_right = -102.0
+offset_bottom = 132.0
+text = "False"
+
+[node name="SAContainer" type="Label" parent="TriviaUI/Panel" unique_id=370758740]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 19.0
+offset_right = 20.0
+offset_bottom = 42.0
+grow_horizontal = 2
+
+[node name="Answer1" type="TextEdit" parent="TriviaUI/Panel/SAContainer" unique_id=1040737058]
+layout_mode = 0
+offset_left = -149.0
+offset_top = 102.0
+offset_right = -141.0
+offset_bottom = 110.0
+placeholder_text = "Enter Answer Here!"
+
+[node name="QuestionLabel" type="Label" parent="TriviaUI/Panel" unique_id=839692307]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="InteractLabel" type="CanvasLayer" parent="." unique_id=1500709348]
+script = ExtResource("5_guunk")
+
+[node name="Label" type="Label" parent="InteractLabel" unique_id=1613730685]
+offset_left = -592.0
+offset_top = -1460.0
+offset_right = -529.0
+offset_bottom = -1437.0
+text = "Press 'E'"
+
+[node name="Door" type="Node3D" parent="." unique_id=1768842819]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -17.19, 0, -14.040001)
+
+[node name="Mesh" type="MeshInstance3D" parent="Door" unique_id=1723765985]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.539999, -3.75, -9.690001)
+mesh = SubResource("BoxMesh_8hpol")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Door/Mesh" unique_id=148000915]
+script = ExtResource("6_u14ju")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Door/Mesh/StaticBody3D" unique_id=632369510]
+shape = SubResource("ConvexPolygonShape3D_00i1e")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1618178522]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8299994, -0.65999997, -3.31)
+script = ExtResource("2_63qte")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D" unique_id=1078841860]
+transform = Transform3D(-0.2954423, 0, 0.052094486, 0, 0.29999998, 0, -0.052094486, 0, -0.2954423, 0, -3.7999997, -1.92)
+mesh = SubResource("CapsuleMesh_flmds")
+surface_material_override/0 = SubResource("StandardMaterial3D_hbe2o")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=304695140]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, -3.7999997, -1.92)
+shape = SubResource("ConvexPolygonShape3D_guunk")
+
+[node name="Neck" type="Node3D" parent="CharacterBody3D" unique_id=526104460]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.6, -1.92)
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Neck" unique_id=1672714672]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.100000024, 0, -0.12000036, 0.01999998)
+fov = 64.68749
+
+[node name="RayCast3D" type="RayCast3D" parent="CharacterBody3D/Neck/Camera3D" unique_id=705132423]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.13999999)
+target_position = Vector3(0, 0, -4)

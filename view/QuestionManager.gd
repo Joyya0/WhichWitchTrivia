@@ -13,7 +13,7 @@ func _ready():
 	db = SQLite.new()
 
 	# Path to database
-	db.path = "res://triviadb.db"
+	db.path = "res://triviadb/triviadb.db"
 
 	# Open DB
 	db.open_db()
