@@ -11,6 +11,11 @@ extends CanvasLayer
 @onready var button2 = $Panel/MCContainer/Answer2
 @onready var button3 = $Panel/MCContainer/Answer3
 
+@onready var true_button = $Panel/TFContainer/True
+@onready var false_button = $Panel/TFContainer/False
+
+@onready var textbox = $Panel/SAContainer/textbox
+
 var current_question
 var next_room = ""
 
@@ -23,6 +28,9 @@ func _ready():
 	button1.pressed.connect(func(): answer_selected(0))
 	button2.pressed.connect(func(): answer_selected(1))
 	button3.pressed.connect(func(): answer_selected(2))
+	
+	true_button.pressed.connect(func(): answer_selected_tf("True"))
+	false_button.pressed.connect(func(): answer_selected_tf("False"))
 
 
 func show_question(question_data, room_path = ""):
@@ -53,9 +61,15 @@ func show_question(question_data, room_path = ""):
 
 			true_false_container.visible = true
 
+			button1.text = "True"
+			button2.text = "False"
+
 		"sa":
 
 			short_answer_container.visible = true
+			textbox.text = ""
+
+			
 
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
@@ -77,7 +91,7 @@ func answer_selected(index):
 		2:
 			selected_answer = button3.text
 
-	if selected_answer == current_question["answer"]:
+	if selected_answer.to_lower() == str(current_question["answer"]).to_lower():
 
 		print("Correct!")
 
@@ -88,7 +102,42 @@ func answer_selected(index):
 		if player:
 			player.can_move = true
 
-		# Change room here later
+		get_tree().change_scene_to_file(next_room)
+
+	else:
+
+		question_label.text = "Incorrect! Try again."
+
+func answer_selected_tf(selected_answer):
+
+	if selected_answer.to_lower() == str(current_question["answer"]).to_lower():
+
+		print("Correct!")
+
+		var player = get_tree().get_first_node_in_group("player")
+
+		if player:
+			player.can_move = true
+
+		get_tree().change_scene_to_file(next_room)
+
+	else:
+
+		question_label.text = "Incorrect! Try again."
+
+func submit_short_answer():
+
+	var user_answer = textbox.text.strip_edges()
+
+	if user_answer.to_lower() == str(current_question["answer"]).to_lower():
+
+		print("Correct!")
+
+		var player = get_tree().get_first_node_in_group("player")
+
+		if player:
+			player.can_move = true
+
 		get_tree().change_scene_to_file(next_room)
 
 	else:

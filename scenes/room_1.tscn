@@ -143,7 +143,7 @@ offset_right = 20.0
 offset_bottom = 42.0
 grow_horizontal = 2
 
-[node name="Answer1" type="Button" parent="TriviaUI/Panel/TFContainer" unique_id=1813387992]
+[node name="True" type="Button" parent="TriviaUI/Panel/TFContainer" unique_id=1813387992]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -154,7 +154,7 @@ offset_right = -142.0
 offset_bottom = 57.5
 grow_vertical = 2
 
-[node name="Answer2" type="Button" parent="TriviaUI/Panel/TFContainer" unique_id=1533179415]
+[node name="False" type="Button" parent="TriviaUI/Panel/TFContainer" unique_id=1533179415]
 layout_mode = 0
 offset_left = -150.0
 offset_top = 101.0
@@ -172,7 +172,7 @@ offset_right = 20.0
 offset_bottom = 42.0
 grow_horizontal = 2
 
-[node name="Answer1" type="TextEdit" parent="TriviaUI/Panel/SAContainer" unique_id=515968026]
+[node name="textbox" type="TextEdit" parent="TriviaUI/Panel/SAContainer" unique_id=515968026]
 layout_mode = 0
 offset_left = -149.0
 offset_top = 102.0
