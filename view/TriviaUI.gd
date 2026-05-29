@@ -89,7 +89,7 @@ func answer_selected(index):
 			player.can_move = true
 
 		# Change room here later
-		print("Loading room: ", next_room)
+		get_tree().change_scene_to_file(next_room)
 
 	else:
 

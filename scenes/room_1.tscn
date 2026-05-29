@@ -203,6 +203,7 @@ mesh = SubResource("BoxMesh_irjyx")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Door/Mesh" unique_id=815058179]
 script = ExtResource("4_xhekj")
+next_room_scene = "uid://w2qnvayqx653"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Door/Mesh/StaticBody3D" unique_id=1833250687]
 shape = SubResource("ConvexPolygonShape3D_0akh5")
