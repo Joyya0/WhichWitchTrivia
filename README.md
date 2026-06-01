@@ -52,3 +52,11 @@ Francesca: Added three more maze rooms, continued to brainstorm trivia questions
 branch stabled and aligned. 
 
 Taryn/Bee: Worked on designing textures for the walls, began composing music.
+
+Iteration 4:
+
+Anna: Added Questions to SQLite db, started connecting the mazes so a correct answers will take you to the next level (1-3 currently working), 
+Worked on trivia UI to ensure the questions/answers appear correctly which is still in progress.
+Francesca: 
+
+Taryn/Bee: 
