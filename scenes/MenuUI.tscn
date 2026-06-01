@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c45xhifftj6ob"]
+
+[ext_resource type="Script" uid="uid://uqlf3w0d4txg" path="res://view/MenuUI.gd" id="1_811wr"]
+
+[node name="MenuUi" type="Control" unique_id=1704181667]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_811wr")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=665306853]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="FileButton" type="MenuButton" parent="HBoxContainer" unique_id=741787573]
+layout_mode = 2
+text = "File"
+
+[node name="HelpButton" type="MenuButton" parent="HBoxContainer" unique_id=1352057111]
+layout_mode = 2
+text = "Help
+"
