@@ -1,9 +1,9 @@
-[gd_scene format=3 uid="uid://cc8hmdctxr1p3"]
+[gd_scene format=3 uid="uid://cpakhwuuu4yiv"]
 
-[ext_resource type="Script" uid="uid://bke6segaoxx05" path="res://Interactable.gd" id="1_t7hg2"]
+[ext_resource type="Script" uid="uid://bke6segaoxx05" path="res://Interactable.gd" id="1_2ltvy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ichvf"]
-albedo_color = Color(0.23426375, 0.4096172, 0.22549492, 1)
+albedo_color = Color(0.2982811, 0.12280611, 0.29988894, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_ichvf"]
 material = SubResource("StandardMaterial3D_ichvf")
@@ -12,11 +12,10 @@ size = Vector3(1, 2, 1)
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_t7hg2"]
 points = PackedVector3Array(-0.4999208, -0.98508894, -0.5, 0.4999784, 0.954305, 0.5, 0.5, 0.9543469, -0.48414865, -0.4999208, 0.98508894, -0.5, -0.4840494, -0.954305, 0.5, 0.5, -0.9543469, -0.48414865, -0.4840494, 0.954305, 0.5, 0.4999784, -0.954305, 0.5)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t7hg2"]
-albedo_color = Color(0.5307964, 0.26066008, 0.32758093, 1)
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_t7hg2"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_g2w8g"]
-material = SubResource("StandardMaterial3D_t7hg2")
+material = SubResource("ShaderMaterial_t7hg2")
 size = Vector3(1, 2, 1)
 
 [node name="MeshLibrary" type="Node3D" unique_id=1727503607]
@@ -30,9 +29,8 @@ mesh = SubResource("BoxMesh_ichvf")
 shape = SubResource("ConvexPolygonShape3D_t7hg2")
 
 [node name="Door" type="MeshInstance3D" parent="." unique_id=519570615]
-visible = false
 mesh = SubResource("BoxMesh_g2w8g")
-script = ExtResource("1_t7hg2")
+script = ExtResource("1_2ltvy")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Door" unique_id=848162260]
 
