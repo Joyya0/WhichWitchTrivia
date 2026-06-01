@@ -60,4 +60,4 @@ Worked on trivia UI to ensure the questions/answers appear correctly which is st
 
 Francesca: Worked on the menu UI and created the gd script for it, also created the File and Help buttons. Finished updating the rest of the maze rooms. 
 
-Taryn/Bee: 
+Taryn/Bee: Worked on music and wall texture. Ran into some issues while applying textures but actual texture is finalized.
