@@ -63,116 +63,6 @@ data = {
 }
 metadata/_editor_floor_ = Vector3(0, -3, 0)
 
-[node name="TriviaUI" type="CanvasLayer" parent="." unique_id=767890137]
-script = ExtResource("4_hbe2o")
-
-[node name="Panel" type="Panel" parent="TriviaUI" unique_id=862939642]
-offset_left = 174.0
-offset_top = 107.0
-offset_right = 574.0
-offset_bottom = 357.0
-
-[node name="MCContainer" type="Label" parent="TriviaUI/Panel" unique_id=972105174]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -20.0
-offset_top = 19.0
-offset_right = 20.0
-offset_bottom = 42.0
-grow_horizontal = 2
-
-[node name="Answer1" type="Button" parent="TriviaUI/Panel/MCContainer" unique_id=1643904509]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = -150.0
-offset_top = 49.5
-offset_right = -142.0
-offset_bottom = 57.5
-grow_vertical = 2
-
-[node name="Answer2" type="Button" parent="TriviaUI/Panel/MCContainer" unique_id=1597706022]
-layout_mode = 0
-offset_left = -150.0
-offset_top = 101.0
-offset_right = -142.0
-offset_bottom = 109.0
-
-[node name="Answer3" type="Button" parent="TriviaUI/Panel/MCContainer" unique_id=1004214338]
-layout_mode = 0
-offset_left = -150.0
-offset_top = 141.0
-offset_right = -142.0
-offset_bottom = 149.0
-
-[node name="TFContainer" type="Label" parent="TriviaUI/Panel" unique_id=1629224351]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -20.0
-offset_top = 19.0
-offset_right = 20.0
-offset_bottom = 42.0
-grow_horizontal = 2
-
-[node name="True" type="Button" parent="TriviaUI/Panel/TFContainer" unique_id=530713243]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = -150.0
-offset_top = 49.5
-offset_right = -142.0
-offset_bottom = 57.5
-grow_vertical = 2
-text = "True"
-
-[node name="False" type="Button" parent="TriviaUI/Panel/TFContainer" unique_id=1452753964]
-layout_mode = 0
-offset_left = -150.0
-offset_top = 101.0
-offset_right = -102.0
-offset_bottom = 132.0
-text = "False"
-
-[node name="SAContainer" type="Label" parent="TriviaUI/Panel" unique_id=370758740]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -20.0
-offset_top = 19.0
-offset_right = 20.0
-offset_bottom = 42.0
-grow_horizontal = 2
-
-[node name="textbox" type="TextEdit" parent="TriviaUI/Panel/SAContainer" unique_id=1040737058]
-layout_mode = 0
-offset_left = -149.0
-offset_top = 102.0
-offset_right = -141.0
-offset_bottom = 110.0
-placeholder_text = "Enter Answer Here!"
-
-[node name="QuestionLabel" type="Label" parent="TriviaUI/Panel" unique_id=839692307]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-
-[node name="InteractLabel" type="CanvasLayer" parent="." unique_id=1500709348]
-script = ExtResource("5_guunk")
-
-[node name="Label" type="Label" parent="InteractLabel" unique_id=1613730685]
-offset_left = -592.0
-offset_top = -1460.0
-offset_right = -529.0
-offset_bottom = -1437.0
-text = "Press 'E'"
-
 [node name="Door" type="Node3D" parent="." unique_id=1768842819]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -17.19, 0, -14.040001)
 
@@ -210,3 +100,164 @@ fov = 64.68749
 [node name="RayCast3D" type="RayCast3D" parent="CharacterBody3D/Neck/Camera3D" unique_id=705132423]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.13999999)
 target_position = Vector3(0, 0, -4)
+
+[node name="TriviaUI" type="CanvasLayer" parent="." unique_id=142293430]
+script = ExtResource("4_hbe2o")
+
+[node name="Panel" type="Panel" parent="TriviaUI" unique_id=1309884688]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -125.0
+offset_right = 250.0
+offset_bottom = 125.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="MCContainer" type="Label" parent="TriviaUI/Panel" unique_id=831126655]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 19.0
+offset_right = 20.0
+offset_bottom = 59.0
+grow_horizontal = 2
+autowrap_mode = 3
+
+[node name="Answer1" type="Button" parent="TriviaUI/Panel/MCContainer" unique_id=1453928259]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = 91.0
+offset_right = -142.0
+offset_bottom = 99.0
+grow_vertical = 2
+
+[node name="Answer2" type="Button" parent="TriviaUI/Panel/MCContainer" unique_id=1729551724]
+layout_mode = 0
+offset_left = -150.0
+offset_top = 142.5
+offset_right = -142.0
+offset_bottom = 150.5
+
+[node name="Answer3" type="Button" parent="TriviaUI/Panel/MCContainer" unique_id=1795714754]
+layout_mode = 0
+offset_left = -150.0
+offset_top = 181.0
+offset_right = -142.0
+offset_bottom = 189.0
+
+[node name="SAContainer" type="Label" parent="TriviaUI/Panel" unique_id=1927502058]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 19.0
+offset_right = 20.0
+offset_bottom = 59.0
+grow_horizontal = 2
+autowrap_mode = 3
+
+[node name="textbox" type="LineEdit" parent="TriviaUI/Panel/SAContainer" unique_id=1949546173]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = 108.0
+offset_right = 50.0
+offset_bottom = 138.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 10
+placeholder_text = "Enter Answer Here"
+
+[node name="QuestionLabel" type="Label" parent="TriviaUI/Panel" unique_id=237246904]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = 28.0
+offset_right = 200.0
+offset_bottom = 51.0
+grow_horizontal = 2
+autowrap_mode = 3
+
+[node name="TFContainer" type="Label" parent="TriviaUI/Panel" unique_id=258923758]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 19.0
+offset_right = 20.0
+offset_bottom = 59.0
+grow_horizontal = 2
+autowrap_mode = 3
+
+[node name="True" type="Button" parent="TriviaUI/Panel/TFContainer" unique_id=548736306]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -22.0
+offset_top = 113.0
+offset_right = 23.0
+offset_bottom = 99.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 13
+text = "True"
+
+[node name="False" type="Button" parent="TriviaUI/Panel/TFContainer" unique_id=655848635]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -21.0
+offset_top = 152.0
+offset_right = 24.0
+offset_bottom = 138.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 13
+text = "False"
+
+[node name="InteractLabel" type="CanvasLayer" parent="." unique_id=548710781]
+script = ExtResource("5_guunk")
+
+[node name="Panel" type="Panel" parent="InteractLabel" unique_id=1053158277]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="InteractLabel/Panel" unique_id=989815506]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -20.0
+offset_right = 110.0
+offset_bottom = 20.0
+grow_vertical = 2
+text = "Press 'E'"
+horizontal_alignment = 1
+vertical_alignment = 1

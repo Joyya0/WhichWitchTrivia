@@ -91,10 +91,18 @@ target_position = Vector3(0, 0, -4)
 script = ExtResource("5_0akh5")
 
 [node name="Panel" type="Panel" parent="TriviaUI" unique_id=1483626536]
-offset_left = 174.0
-offset_top = 107.0
-offset_right = 574.0
-offset_bottom = 357.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -125.0
+offset_right = 250.0
+offset_bottom = 125.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="MCContainer" type="Label" parent="TriviaUI/Panel" unique_id=985959626]
 layout_mode = 1
@@ -104,8 +112,9 @@ anchor_right = 0.5
 offset_left = -20.0
 offset_top = 19.0
 offset_right = 20.0
-offset_bottom = 42.0
+offset_bottom = 59.0
 grow_horizontal = 2
+autowrap_mode = 3
 
 [node name="Answer1" type="Button" parent="TriviaUI/Panel/MCContainer" unique_id=1213641523]
 layout_mode = 1
@@ -113,24 +122,24 @@ anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
 offset_left = -150.0
-offset_top = 49.5
+offset_top = 91.0
 offset_right = -142.0
-offset_bottom = 57.5
+offset_bottom = 99.0
 grow_vertical = 2
 
 [node name="Answer2" type="Button" parent="TriviaUI/Panel/MCContainer" unique_id=1489263600]
 layout_mode = 0
 offset_left = -150.0
-offset_top = 101.0
+offset_top = 142.5
 offset_right = -142.0
-offset_bottom = 109.0
+offset_bottom = 150.5
 
 [node name="Answer3" type="Button" parent="TriviaUI/Panel/MCContainer" unique_id=1213601589]
 layout_mode = 0
 offset_left = -150.0
-offset_top = 141.0
+offset_top = 181.0
 offset_right = -142.0
-offset_bottom = 149.0
+offset_bottom = 189.0
 
 [node name="TFContainer" type="Label" parent="TriviaUI/Panel" unique_id=434732048]
 layout_mode = 1
@@ -140,26 +149,39 @@ anchor_right = 0.5
 offset_left = -20.0
 offset_top = 19.0
 offset_right = 20.0
-offset_bottom = 42.0
+offset_bottom = 59.0
 grow_horizontal = 2
+autowrap_mode = 3
 
 [node name="True" type="Button" parent="TriviaUI/Panel/TFContainer" unique_id=1813387992]
 layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = -150.0
-offset_top = 49.5
-offset_right = -142.0
-offset_bottom = 57.5
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -22.0
+offset_top = 113.0
+offset_right = 23.0
+offset_bottom = 99.0
+grow_horizontal = 2
 grow_vertical = 2
+theme_override_font_sizes/font_size = 13
+text = "True"
 
-[node name="False" type="Button" parent="TriviaUI/Panel/TFContainer" unique_id=1533179415]
-layout_mode = 0
-offset_left = -150.0
-offset_top = 101.0
-offset_right = -142.0
-offset_bottom = 109.0
+[node name="False" type="Button" parent="TriviaUI/Panel/TFContainer" unique_id=51610418]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -21.0
+offset_top = 152.0
+offset_right = 24.0
+offset_bottom = 138.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 13
+text = "False"
 
 [node name="SAContainer" type="Label" parent="TriviaUI/Panel" unique_id=2011864999]
 layout_mode = 1
@@ -169,31 +191,62 @@ anchor_right = 0.5
 offset_left = -20.0
 offset_top = 19.0
 offset_right = 20.0
-offset_bottom = 42.0
+offset_bottom = 59.0
 grow_horizontal = 2
+autowrap_mode = 3
 
-[node name="textbox" type="TextEdit" parent="TriviaUI/Panel/SAContainer" unique_id=515968026]
-layout_mode = 0
-offset_left = -149.0
-offset_top = 102.0
-offset_right = -141.0
-offset_bottom = 110.0
-placeholder_text = "Enter Answer Here!"
+[node name="textbox" type="LineEdit" parent="TriviaUI/Panel/SAContainer" unique_id=204362430]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = 108.0
+offset_right = 50.0
+offset_bottom = 138.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 10
+placeholder_text = "Enter Answer Here"
 
 [node name="QuestionLabel" type="Label" parent="TriviaUI/Panel" unique_id=2060609440]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = 28.0
+offset_right = 200.0
+offset_bottom = 51.0
+grow_horizontal = 2
+autowrap_mode = 3
 
 [node name="InteractLabel" type="CanvasLayer" parent="." unique_id=923504786]
 script = ExtResource("6_d0u7m")
 
-[node name="Label" type="Label" parent="InteractLabel" unique_id=1383898280]
-offset_left = -592.0
-offset_top = -1460.0
-offset_right = -529.0
-offset_bottom = -1437.0
+[node name="Panel" type="Panel" parent="InteractLabel" unique_id=2076948027]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="InteractLabel/Panel" unique_id=1756923871]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -20.0
+offset_right = 110.0
+offset_bottom = 20.0
+grow_vertical = 2
 text = "Press 'E'"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Door" type="Node3D" parent="." unique_id=351805582]
 

@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 @onready var question_label = $Panel/QuestionLabel
+@onready var prompt = $"../InteractLabel"
 
 @onready var multiple_choice_container = $Panel/MCContainer
 @onready var true_false_container = $Panel/TFContainer
@@ -20,10 +21,9 @@ var current_question
 var next_room = ""
 
 func _ready():
-
 	add_to_group("trivia")
-
 	visible = false
+	textbox.text_submitted.connect(_on_text_submitted)
 
 	button1.pressed.connect(func(): answer_selected(0))
 	button2.pressed.connect(func(): answer_selected(1))
@@ -34,7 +34,6 @@ func _ready():
 
 
 func show_question(question_data, room_path = ""):
-
 	visible = true
 
 	current_question = question_data
@@ -68,6 +67,7 @@ func show_question(question_data, room_path = ""):
 
 			short_answer_container.visible = true
 			textbox.text = ""
+			textbox.grab_focus()
 
 			
 
@@ -78,7 +78,9 @@ func show_question(question_data, room_path = ""):
 	if player:
 		player.can_move = false
 
-
+func _on_text_submitted(_text):
+	submit_short_answer()
+	
 func answer_selected(index):
 
 	var selected_answer = ""

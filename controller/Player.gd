@@ -49,14 +49,27 @@ func _unhandled_input(event: InputEvent) -> void:
 			camera.rotate_x(-event.relative.y * 0.01)
 			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-30), deg_to_rad(60))
 
-func _process(delta):
-	if Input.is_action_just_pressed("interact"):
-		if raycast.is_colliding():
-			var collider = raycast.get_collider()
-			if collider.has_method("interact"):
-				collider.interact()
-				prompt.visible = true
-			else:
-				prompt.visible = false
+func _process(_delta):
+
+	if raycast.is_colliding():
+
+		var collider = raycast.get_collider()
+
+		if collider.has_method("interact"):
+			prompt.visible = true
 		else:
 			prompt.visible = false
+
+	else:
+		prompt.visible = false
+
+
+	if Input.is_action_just_pressed("interact"):
+	
+		if raycast.is_colliding():
+
+			var collider = raycast.get_collider()
+
+			if collider.has_method("interact"):
+				collider.interact()
+				
