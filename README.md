@@ -53,10 +53,11 @@ branch stabled and aligned.
 
 Taryn/Bee: Worked on designing textures for the walls, began composing music.
 
-Iteration 4:
+Iteration 5:
 
 Anna: Added Questions to SQLite db, started connecting the mazes so a correct answers will take you to the next level (1-3 currently working), 
 Worked on trivia UI to ensure the questions/answers appear correctly which is still in progress.
-Francesca: 
+
+Francesca: Worked on the menu UI and created the gd script for it, also created the File and Help buttons. Finished updating the rest of the maze rooms. 
 
 Taryn/Bee: 
