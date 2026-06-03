@@ -7,21 +7,6 @@
 [ext_resource type="Script" uid="uid://chw38lrevyef0" path="res://controller/Player.gd" id="5_o8owr"]
 [ext_resource type="Texture2D" uid="uid://g7kckxuhqq76" path="res://textures/gobbo_bean_texture.png" id="6_1sfdy"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_dbpl5"]
-sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
-
-[sub_resource type="Sky" id="Sky_pmnxm"]
-sky_material = SubResource("ProceduralSkyMaterial_dbpl5")
-
-[sub_resource type="Environment" id="Environment_ccapj"]
-background_mode = 2
-sky = SubResource("Sky_pmnxm")
-tonemap_mode = 2
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o8owr"]
-albedo_color = Color(0.19888374, 7.676855e-06, 0.16441455, 1)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6eqho"]
 albedo_color = Color(0.5307964, 0.26066008, 0.32758093, 1)
 
@@ -31,9 +16,6 @@ size = Vector3(1, 2, 1)
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_o8owr"]
 points = PackedVector3Array(-0.4999208, -0.98508894, -0.5, 0.4999784, 0.954305, 0.5, 0.5, 0.9543469, -0.48414865, -0.4999208, 0.98508894, -0.5, -0.4840494, -0.954305, 0.5, 0.5, -0.9543469, -0.48414865, -0.4840494, 0.954305, 0.5, 0.4999784, -0.954305, 0.5)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5d4n5"]
-albedo_color = Color(0.19888374, 7.676855e-06, 0.16441455, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0akh5"]
 albedo_color = Color(0.32506025, 0.53838396, 0.7169085, 1)
@@ -47,14 +29,16 @@ albedo_texture = ExtResource("6_1sfdy")
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_rb4hd"]
 points = PackedVector3Array(-0.12520654, -0.532801, -0.4805069, 0.022783129, 0.4760704, 0.49888408, 0.16971254, 0.5591441, 0.46417162, 0.23105091, -0.8035912, 0.32045516, 0.40741014, 0.651043, -0.24352328, -0.4827893, 0.59484255, 0.082213186, -0.3628679, -0.68231165, 0.2896967, 0.46904355, -0.65452886, -0.06627126, -0.12744367, 0.8427015, -0.33810276, -0.39343542, -0.6839421, -0.24471663, 0.43825462, 0.62330925, 0.20084947, 0.0841477, 0.977454, 0.11479468, -0.06820232, -0.9764576, -0.12927033, 0.20054972, -0.56312895, -0.4514544, -0.18552664, 0.59545326, -0.4534751, -0.27336287, 0.59226835, 0.40775412, -0.0069364863, -0.47682306, 0.49966025, 0.37582088, -0.5886136, 0.31695515, 0.111579016, 0.5630594, -0.48117727, -0.41725034, 0.5278656, -0.27049688, -0.48454633, -0.59697217, -0.06650971, -0.27974695, 0.90856135, 0.05333608, -0.25019687, -0.8807117, 0.20531891, 0.263647, -0.90277094, -0.1273943, 0.29336792, 0.8715263, -0.15719566, 0.3734115, -0.5263189, -0.32824618, 0.4996626, 0.47664148, -0.0068885577, 0.053105574, 0.8750009, 0.32470253, -0.15454252, -0.5908538, 0.4658794, -0.09727988, -0.7823577, -0.39818847, -0.3876489, -0.49817133, 0.31564978, -0.30067965, -0.58799505, -0.38890144)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o8owr"]
+vertex_color_use_as_albedo = true
+vertex_color_is_srgb = true
+albedo_color = Color(0.40784314, 0.21960784, 0.7490196, 1)
+
+[sub_resource type="Environment" id="Environment_1sfdy"]
+background_mode = 1
+background_color = Color(0.23221323, 0.16603392, 0.35289204, 1)
+
 [node name="Room4" type="Node" unique_id=1964123048]
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=320444027]
-environment = SubResource("Environment_ccapj")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=902619500]
-transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
-shadow_enabled = true
 
 [node name="GridMap" type="GridMap" parent="." unique_id=1620884118]
 mesh_library = ExtResource("1_ccapj")
@@ -225,12 +209,6 @@ text = "Press 'E'"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Ceiling" type="CSGBox3D" parent="." unique_id=1335349858]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.0300002, 0)
-use_collision = true
-size = Vector3(20, 0.5, 20)
-material = SubResource("StandardMaterial3D_o8owr")
-
 [node name="Door" type="Node3D" parent="." unique_id=1131469719]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 6.99, 0, -19.019999)
 
@@ -244,12 +222,6 @@ next_room_scene = "uid://826h3g1kflsb"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Door/Mesh/StaticBody3D" unique_id=423993854]
 shape = SubResource("ConvexPolygonShape3D_o8owr")
-
-[node name="Floor2" type="CSGBox3D" parent="." unique_id=296274898]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0)
-use_collision = true
-size = Vector3(20, 0.5, 20)
-material = SubResource("StandardMaterial3D_5d4n5")
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=384210630]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.18, -0.65999997, 10.4)
@@ -274,3 +246,12 @@ fov = 64.68749
 [node name="RayCast3D" type="RayCast3D" parent="CharacterBody3D/Neck/Camera3D" unique_id=921648244]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.13999999)
 target_position = Vector3(0, 0, -4)
+
+[node name="Floor" type="CSGBox3D" parent="." unique_id=1552331179]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0)
+use_collision = true
+size = Vector3(20, 0.5, 20)
+material = SubResource("StandardMaterial3D_o8owr")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1665010893]
+environment = SubResource("Environment_1sfdy")
