@@ -265,7 +265,7 @@ next_room_scene = "uid://w2qnvayqx653"
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Door/Mesh/StaticBody3D" unique_id=1833250687]
 shape = SubResource("ConvexPolygonShape3D_0akh5")
 
-[node name="Floor2" type="CSGBox3D" parent="." unique_id=1849197099]
+[node name="Ceiling" type="CSGBox3D" parent="." unique_id=1849197099]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.0300002, 0)
 use_collision = true
 size = Vector3(20, 0.5, 20)
