@@ -7,24 +7,21 @@
 [ext_resource type="Script" uid="uid://chw38lrevyef0" path="res://controller/Player.gd" id="5_4p6mq"]
 [ext_resource type="Texture2D" uid="uid://g7kckxuhqq76" path="res://textures/gobbo_bean_texture.png" id="6_mxgfl"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d0u7m"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mxgfl"]
 albedo_color = Color(0.5307964, 0.26066008, 0.32758093, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_4p6mq"]
-material = SubResource("StandardMaterial3D_d0u7m")
+material = SubResource("StandardMaterial3D_mxgfl")
 size = Vector3(1, 2, 1)
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_mxgfl"]
 points = PackedVector3Array(-0.4999208, -0.98508894, -0.5, 0.4999784, 0.954305, 0.5, 0.5, 0.9543469, -0.48414865, -0.4999208, 0.98508894, -0.5, -0.4840494, -0.954305, 0.5, 0.5, -0.9543469, -0.48414865, -0.4840494, 0.954305, 0.5, 0.4999784, -0.954305, 0.5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bkyhs"]
-albedo_color = Color(0.19888374, 7.676855e-06, 0.16441455, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hbosg"]
 albedo_color = Color(0.32506025, 0.53838396, 0.7169085, 1)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_hp7uh"]
-material = SubResource("StandardMaterial3D_hbosg")
+material = SubResource("StandardMaterial3D_bkyhs")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sl3n2"]
 albedo_texture = ExtResource("6_mxgfl")
@@ -225,12 +222,6 @@ next_room_scene = "uid://dbed7x7lu2bdx"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Door/Mesh/StaticBody3D" unique_id=2079440756]
 shape = SubResource("ConvexPolygonShape3D_mxgfl")
-
-[node name="Floor" type="CSGBox3D" parent="." unique_id=1976414477]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0)
-use_collision = true
-size = Vector3(20, 0.5, 20)
-material = SubResource("StandardMaterial3D_bkyhs")
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=548422164]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.7200003, -0.65999997, 2.79)
