@@ -13,6 +13,7 @@ var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 var can_move := true
 
+
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity.y -= gravity * delta
@@ -51,17 +52,17 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _process(_delta):
 
-	if raycast.is_colliding():
+	if !can_move:
+		return
 
-		var collider = raycast.get_collider()
+	if Input.is_action_just_pressed("interact"):
 
-		if collider.has_method("interact"):
-			prompt.visible = true
-		else:
-			prompt.visible = false
+		if raycast.is_colliding():
 
-	else:
-		prompt.visible = false
+			var collider = raycast.get_collider()
+
+			if collider.has_method("interact"):
+				collider.interact()
 
 
 	if Input.is_action_just_pressed("interact"):

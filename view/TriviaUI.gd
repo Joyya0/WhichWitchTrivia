@@ -19,7 +19,7 @@ extends CanvasLayer
 
 var current_question
 var next_room = ""
-var doorCount = 1
+@export var door_count : int = 1
 
 func _ready():
 	add_to_group("trivia")
@@ -148,5 +148,8 @@ func submit_short_answer():
 		wrong_answer_selected()
 
 func wrong_answer_selected():
-	if doorCount == 0:
+	door_count -= 1
+	if door_count == 0:
 		question_label.text = "Game Over!"
+	else:
+		question_label.text = "Incorrect! This door is now locked."
