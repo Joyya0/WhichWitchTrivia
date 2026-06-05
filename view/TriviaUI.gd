@@ -19,6 +19,7 @@ extends CanvasLayer
 
 var current_question
 var next_room = ""
+var doorCount = 1
 
 func _ready():
 	add_to_group("trivia")
@@ -108,7 +109,7 @@ func answer_selected(index):
 
 	else:
 
-		question_label.text = "Incorrect! Try again."
+		wrong_answer_selected()
 
 func answer_selected_tf(selected_answer):
 
@@ -125,7 +126,7 @@ func answer_selected_tf(selected_answer):
 
 	else:
 
-		question_label.text = "Incorrect! Try again."
+		wrong_answer_selected()
 
 func submit_short_answer():
 
@@ -144,4 +145,8 @@ func submit_short_answer():
 
 	else:
 
-		question_label.text = "Incorrect! Try again."
+		wrong_answer_selected()
+
+func wrong_answer_selected():
+	if doorCount == 0:
+		question_label.text = "Game Over!"
