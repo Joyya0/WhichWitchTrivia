@@ -7,16 +7,21 @@ layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_811wr")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=665306853]
+[node name="Panel" type="Panel" parent="." unique_id=1663660305]
 layout_mode = 0
-offset_right = 40.0
+offset_right = 88.0
 offset_bottom = 40.0
 
-[node name="FileButton" type="MenuButton" parent="HBoxContainer" unique_id=741787573]
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel" unique_id=665306853]
+layout_mode = 0
+offset_right = 83.0
+offset_bottom = 40.0
+
+[node name="FileMenu" type="MenuButton" parent="Panel/HBoxContainer" unique_id=741787573]
 layout_mode = 2
 text = "File"
 
-[node name="HelpButton" type="MenuButton" parent="HBoxContainer" unique_id=1352057111]
+[node name="HelpMenu" type="MenuButton" parent="Panel/HBoxContainer" unique_id=1352057111]
 layout_mode = 2
 text = "Help
 "

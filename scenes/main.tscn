@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dxwao1qkto2tn" path="res://scenes/room_1.tscn" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://chw38lrevyef0" path="res://controller/Player.gd" id="3_sugp2"]
 [ext_resource type="Texture2D" uid="uid://g7kckxuhqq76" path="res://textures/gobbo_bean_texture.png" id="4_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://c45xhifftj6ob" path="res://scenes/MenuUI.tscn" id="4_tbgi4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0wfyh"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -58,3 +59,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.6, -1.92)
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Neck" unique_id=1287039805]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.100000024, 0, -0.12000036, 0.01999998)
 fov = 64.68749
+
+[node name="MenuUi" parent="." unique_id=1704181667 instance=ExtResource("4_tbgi4")]
