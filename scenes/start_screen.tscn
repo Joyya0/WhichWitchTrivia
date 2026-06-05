@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://be0djs1go41lj"]
+
+[ext_resource type="Script" uid="uid://vvyyyi6lgvi4" path="res://view/StartScreen.gd" id="1_tx5wa"]
+
+[node name="StartScreen" type="Control" unique_id=1731190967]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_tx5wa")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1649113880]
+layout_mode = 0
+offset_right = 1281.0
+offset_bottom = 722.0
+color = Color(0.5803922, 0.42745098, 0.77254903, 1)
+
+[node name="TitleLabel" type="Label" parent="." unique_id=1787742060]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 325.0
+offset_top = 154.0
+offset_right = 855.0
+offset_bottom = 177.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 45
+text = "Which Witch Trivia Maze"
+
+[node name="DescLabel" type="Label" parent="." unique_id=600305543]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 296.0
+offset_top = 220.0
+offset_right = 901.0
+offset_bottom = 253.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "	Traverse the maze and answer 
+	the witch's riddles to escape!"
+horizontal_alignment = 1
+
+[node name="StartLabel" type="Label" parent="." unique_id=1705132234]
+layout_mode = 0
+offset_left = 508.0
+offset_top = 459.0
+offset_right = 744.0
+offset_bottom = 490.0
+theme_override_font_sizes/font_size = 22
+text = "Press any key to begin"
