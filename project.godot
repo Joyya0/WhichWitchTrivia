@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 GameState="*uid://dmol2xoq53ntf"
 QuestionManager="*uid://bc4eljx6e4org"
+MenuUi="*uid://c45xhifftj6ob"
 
 [display]
 
