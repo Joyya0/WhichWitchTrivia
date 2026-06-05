@@ -31,7 +31,7 @@ func _setup_dialogs():
 	var about = AcceptDialog.new()
 	about.name = "AboutDialog"
 	about.title = "About"
-	about.dialog_text = "WhichWitch Trivia Maze\nVersion 1.0\n\nCreated by: [your team names]\nTCSS 360 - Spring 2026"
+	about.dialog_text = "WhichWitch Trivia Maze\nVersion 1.0\n\nCreated by: [Anna, Bee, Francesca]\nTCSS 360 - Spring 2026"
 	add_child(about)
 
 	# Instructions dialog
