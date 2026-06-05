@@ -29,6 +29,10 @@ window/size/viewport_height=720
 
 enabled=PackedStringArray("res://addons/godot-sqlite/plugin.cfg")
 
+[filesystem]
+
+import/blender/enabled=false
+
 [input]
 
 forward={

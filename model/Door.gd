@@ -17,6 +17,12 @@ func interact():
 
 		var question = QuestionManager.get_random_question()
 
+		print("Question returned: ", question)
+
+		if question == null:
+			print("No question found!")
+			return
+
 		trivia_ui.show_question(question, next_room_scene)
 
 # Check status of door  
