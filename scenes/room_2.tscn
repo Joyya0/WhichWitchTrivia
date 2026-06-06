@@ -5,17 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://g7kckxuhqq76" path="res://textures/gobbo_bean_texture.png" id="3_flmds"]
 [ext_resource type="Script" uid="uid://6c6a8eouaqu8" path="res://view/TriviaUI.gd" id="4_hbe2o"]
 [ext_resource type="Script" uid="uid://ynni1c8rclvu" path="res://view/InteractUI.gd" id="5_guunk"]
+[ext_resource type="ArrayMesh" uid="uid://ipofpax1nhhh" path="res://meshlibrary/door.tres" id="6_flmds"]
 [ext_resource type="Script" uid="uid://u70jldm8mgg3" path="res://model/Door.gd" id="6_u14ju"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_63qte"]
-albedo_color = Color(0.5307964, 0.26066008, 0.32758093, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_8hpol"]
-material = SubResource("StandardMaterial3D_63qte")
-size = Vector3(1, 2, 1)
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_00i1e"]
-points = PackedVector3Array(-0.4999208, -0.98508894, -0.5, 0.4999784, 0.954305, 0.5, 0.5, 0.9543469, -0.48414865, -0.4999208, 0.98508894, -0.5, -0.4840494, -0.954305, 0.5, 0.5, -0.9543469, -0.48414865, -0.4840494, 0.954305, 0.5, 0.4999784, -0.954305, 0.5)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_flmds"]
 albedo_color = Color(0.32506025, 0.53838396, 0.7169085, 1)
@@ -38,6 +29,9 @@ albedo_color = Color(0.40784314, 0.21960784, 0.7490196, 1)
 background_mode = 1
 background_color = Color(0.23221323, 0.16603392, 0.35289204, 1)
 
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_hbe2o"]
+points = PackedVector3Array(-0.4999208, -0.98508894, -0.5, 0.4999784, 0.954305, 0.5, 0.5, 0.9543469, -0.48414865, -0.4999208, 0.98508894, -0.5, -0.4840494, -0.954305, 0.5, 0.5, -0.9543469, -0.48414865, -0.4840494, 0.954305, 0.5, 0.4999784, -0.954305, 0.5)
+
 [node name="Room2" type="Node" unique_id=400199147]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=338344300]
@@ -51,20 +45,6 @@ data = {
 "cells": PackedInt32Array(-131082, 65526, 0, -131082, 65527, 0, -131082, 65528, 0, -131082, 65529, 0, -131082, 65530, 0, -131082, 65531, 0, -131082, 65532, 0, -131082, 65533, 0, -131082, 65534, 0, -131082, 65535, 0, -131082, 0, 0, -131082, 1, 0, -131082, 2, 0, -131082, 3, 0, -131082, 4, 0, -131082, 5, 0, -131082, 6, 0, -131082, 7, 0, -131082, 8, 0, -131082, 9, 0, -131081, 9, 0, -131080, 9, 0, -131079, 9, 0, -131078, 9, 0, -131077, 9, 0, -131076, 9, 0, -131075, 9, 0, -131074, 9, 0, -131073, 9, 0, -196608, 9, 0, -196607, 9, 0, -196606, 9, 0, -196605, 9, 0, -196604, 9, 0, -196603, 9, 0, -196602, 9, 0, -196601, 9, 0, -196600, 9, 0, -196599, 9, 0, -196599, 65526, 0, -196599, 65527, 0, -196599, 65528, 0, -196599, 65529, 0, -196599, 65530, 0, -196599, 65531, 0, -196599, 65532, 0, -196599, 65533, 0, -196599, 65534, 0, -196599, 65535, 0, -196599, 0, 0, -196599, 1, 0, -196599, 2, 0, -196599, 3, 0, -196599, 4, 0, -196599, 5, 0, -196599, 6, 0, -196599, 7, 0, -196599, 8, 0, -131081, 65526, 0, -131079, 65526, 0, -131078, 65526, 0, -131077, 65526, 0, -131076, 65526, 0, -131075, 65526, 0, -131074, 65526, 0, -131073, 65526, 0, -196608, 65526, 0, -196607, 65526, 0, -196606, 65526, 0, -196605, 65526, 0, -196600, 65526, 0, -196601, 65526, 0, -196602, 65526, 0, -196603, 65526, 0, -196604, 65526, 0, -131079, 65527, 0, -131079, 65528, 0, -131079, 65529, 0, -131079, 65532, 0, -131079, 65533, 0, -131079, 65534, 0, -131079, 65535, 0, -131079, 0, 0, -131079, 3, 0, -131079, 4, 0, -131079, 5, 0, -131079, 6, 0, -131078, 6, 0, -131077, 6, 0, -131076, 6, 0, -131073, 6, 0, -196608, 6, 0, -196607, 6, 0, -196602, 6, 0, -196603, 6, 0, -196604, 6, 0, -196602, 5, 0, -196602, 4, 0, -196602, 3, 0, -196602, 0, 0, -196602, 65535, 0, -131076, 65527, 0, -131076, 65528, 0, -131076, 65529, 0, -131076, 65530, 0, -131076, 65531, 0, -131076, 65532, 0, -131076, 0, 0, -131076, 1, 0, -131076, 2, 0, -131076, 3, 0, -196604, 65527, 0, -196604, 65528, 0, -196604, 65529, 0, -196604, 65530, 0, -196600, 65529, 0, -196601, 65529, 0, -196604, 65531, 0, -196607, 5, 0, -196607, 4, 0, -196607, 3, 0, -196607, 2, 0, -196607, 1, 0, -196607, 0, 0, -196603, 3, 0, -196604, 3, 0, -131075, 3, 0, -131074, 3, 0, -131073, 3, 0, -196608, 3, 0, -196608, 0, 0, -131073, 0, 0, -131073, 65529, 0, -196608, 65529, 0, -196607, 65529, 0, -131073, 65530, 0, -131073, 65531, 0, -131073, 65532, 0, -196608, 65532, 0, -196607, 65532, 0, -196603, 65535, 0, -196604, 65535, 0, -196602, 65534, 0, -196607, 65535, 0, -131078, 65532, 0, -131077, 65532, 0, -131073, 7, 0, -131073, 8, 0, -196601, 0, 0, -196600, 0, 0, -196607, 65527, 0, -196607, 65528, 0, -131080, 3, 0, -131081, 3, 0, -196601, 5, 0, -196600, 5, 0, -131076, 65535, 0)
 }
 metadata/_editor_floor_ = Vector3(0, -3, 0)
-
-[node name="Door" type="Node3D" parent="." unique_id=1768842819]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -17.19, 0, -14.040001)
-
-[node name="Mesh" type="MeshInstance3D" parent="Door" unique_id=1723765985]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 4.539999, -3.75, -9.690001)
-mesh = SubResource("BoxMesh_8hpol")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Door/Mesh" unique_id=148000915]
-script = ExtResource("6_u14ju")
-next_room_scene = "uid://b4cniyvvquhak"
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Door/Mesh/StaticBody3D" unique_id=632369510]
-shape = SubResource("ConvexPolygonShape3D_00i1e")
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1618178522]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8299994, -0.65999997, -3.31)
@@ -259,3 +239,18 @@ material = SubResource("StandardMaterial3D_u14ju")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=627911547]
 environment = SubResource("Environment_h8145")
+
+[node name="Door" type="Node3D" parent="." unique_id=293556601]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.0199995, 0, 0)
+
+[node name="Mesh" type="MeshInstance3D" parent="Door" unique_id=186150793]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5001297, -3.7471027, -9.488627)
+mesh = ExtResource("6_flmds")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Door/Mesh" unique_id=1883627974]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0001296997, -0.0028972626, -0.021371841)
+script = ExtResource("6_u14ju")
+next_room_scene = "uid://w2qnvayqx653"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Door/Mesh/StaticBody3D" unique_id=417043833]
+shape = SubResource("ConvexPolygonShape3D_hbe2o")
