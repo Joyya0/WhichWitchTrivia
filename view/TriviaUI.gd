@@ -148,8 +148,13 @@ func submit_short_answer():
 		wrong_answer_selected()
 
 func wrong_answer_selected():
+
 	door_count -= 1
-	if door_count == 0:
-		question_label.text = "Game Over!"
+
+	if door_count <= 0:
+
+		get_tree().change_scene_to_file("res://scenes/GameOver.tscn")
+
 	else:
+
 		question_label.text = "Incorrect! This door is now locked."

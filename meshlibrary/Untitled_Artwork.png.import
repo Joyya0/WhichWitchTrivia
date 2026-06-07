@@ -2,24 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bskx16uk0wk7q"
-path.s3tc="res://.godot/imported/texturedwall_wallTexture.png-4ed74b1bcf824e8d55810e5bfe5d946b.s3tc.ctex"
+uid="uid://cdmvvyhqm0gyp"
+path="res://.godot/imported/Untitled_Artwork.png-7885d658863b71c9e1f58bace0ef770c.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
-}
-generator_parameters={
-"md5": "af5b87b0124f1abf6d7b96b467597f85"
+"vram_texture": false
 }
 
 [deps]
 
-source_file="res://texturedwall_wallTexture.png"
-dest_files=["res://.godot/imported/texturedwall_wallTexture.png-4ed74b1bcf824e8d55810e5bfe5d946b.s3tc.ctex"]
+source_file="res://meshlibrary/Untitled_Artwork.png"
+dest_files=["res://.godot/imported/Untitled_Artwork.png-7885d658863b71c9e1f58bace0ef770c.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -27,7 +23,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -41,4 +37,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

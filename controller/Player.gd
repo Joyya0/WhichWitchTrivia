@@ -52,9 +52,24 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _process(_delta):
 
+	# Show/hide prompt
+	if raycast.is_colliding():
+
+		var collider = raycast.get_collider()
+
+		if collider.has_method("interact"):
+			prompt.visible = true
+		else:
+			prompt.visible = false
+
+	else:
+		prompt.visible = false
+
+	# Don't allow interaction while trivia UI is open
 	if !can_move:
 		return
 
+	# Handle E key
 	if Input.is_action_just_pressed("interact"):
 
 		if raycast.is_colliding():
@@ -63,14 +78,3 @@ func _process(_delta):
 
 			if collider.has_method("interact"):
 				collider.interact()
-
-
-	if Input.is_action_just_pressed("interact"):
-	
-		if raycast.is_colliding():
-
-			var collider = raycast.get_collider()
-
-			if collider.has_method("interact"):
-				collider.interact()
-				
