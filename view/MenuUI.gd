@@ -3,8 +3,6 @@ extends CanvasLayer
 @onready var file_menu = $Panel/HBoxContainer/FileMenu
 @onready var help_menu = $Panel/HBoxContainer/HelpMenu
 
-
-
 func _ready():
 	$Panel.set_anchors_preset(Control.PRESET_TOP_LEFT)
 	$Panel.position = Vector2(0, 0)
@@ -24,7 +22,22 @@ func _ready():
 	help_popup.add_item("Gameplay Instructions", 1)
 	help_popup.id_pressed.connect(_on_help_pressed)
 
+	# Keybind shortcuts for File and Help 
+	_assign_menu_shortcut(file_menu, KEY_F)
+	_assign_menu_shortcut(help_menu, KEY_H)
+
 	_setup_dialogs()
+
+# Helper function to assign keybinds to the MenuButtons
+func _assign_menu_shortcut(menu_btn: MenuButton, key_to_bind: Key):
+	var shortcut = Shortcut.new()
+	var input_event = InputEventKey.new()
+	
+	input_event.keycode = key_to_bind
+	shortcut.events.append(input_event)
+	
+	# MenuButton uses 'shortcut' directly to toggle its dropdown display
+	menu_btn.shortcut = shortcut
 
 func _setup_dialogs():
 	# About dialog
@@ -41,10 +54,10 @@ func _setup_dialogs():
 	instructions.dialog_text = """Welcome to WhichWitch Trivia Maze!
 
 HOW TO PLAY:
-- Navigate through the maze from entrance to exit.
+- Navigate through the maze from entrance to exit using AWSD to move.
 - Each door requires you to answer a trivia question.
 - Answer correctly to pass through the door.
-- Answer wrong and the door is permanently locked!
+- Answer wrong three times and the door is permanently locked!
 
 QUESTION TYPES:
 - Multiple Choice
@@ -76,10 +89,10 @@ func _on_help_pressed(id):
 		1: $InstructionsDialog.popup_centered()
 
 func _save_game():
-	print("Save Game!")  # will hook into SaveGame autoload later
+	print("Save Game!") # will hook into SaveGame autoload later
 
 func _load_game():
-	print("Load Game!")  # will hook into SaveGame autoload later
+	print("Load Game!") # will hook into SaveGame autoload later
 
 func _on_exit_confirmed():
 	get_tree().quit()

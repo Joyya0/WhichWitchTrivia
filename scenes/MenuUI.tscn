@@ -6,9 +6,9 @@
 script = ExtResource("1_811wr")
 
 [node name="Panel" type="Panel" parent="." unique_id=1663660305]
-custom_minimum_size = Vector2(75, 30)
+custom_minimum_size = Vector2(85, 30)
 offset_top = -1.0
-offset_right = 85.0
+offset_right = 140.0
 offset_bottom = 39.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel" unique_id=665306853]
@@ -21,9 +21,9 @@ grow_vertical = 2
 
 [node name="FileMenu" type="MenuButton" parent="Panel/HBoxContainer" unique_id=741787573]
 layout_mode = 2
-text = "File"
+text = "File (F)"
 
 [node name="HelpMenu" type="MenuButton" parent="Panel/HBoxContainer" unique_id=1352057111]
 layout_mode = 2
-text = "Help
+text = "Help (H)
 "
