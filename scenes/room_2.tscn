@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://g7kckxuhqq76" path="res://textures/gobbo_bean_texture.png" id="3_flmds"]
 [ext_resource type="Script" uid="uid://6c6a8eouaqu8" path="res://view/TriviaUI.gd" id="4_hbe2o"]
 [ext_resource type="Script" uid="uid://ynni1c8rclvu" path="res://view/InteractUI.gd" id="5_guunk"]
-[ext_resource type="ArrayMesh" uid="uid://ipofpax1nhhh" path="res://meshlibrary/door.tres" id="6_flmds"]
+[ext_resource type="ArrayMesh" uid="uid://cyxglpjgir1v2" path="res://meshlibrary/door.tres" id="6_flmds"]
 [ext_resource type="Script" uid="uid://u70jldm8mgg3" path="res://model/Door.gd" id="6_u14ju"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_flmds"]
@@ -250,7 +250,7 @@ mesh = ExtResource("6_flmds")
 [node name="StaticBody3D" type="StaticBody3D" parent="Door/Mesh" unique_id=1883627974]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0001296997, -0.0028972626, -0.021371841)
 script = ExtResource("6_u14ju")
-next_room_scene = "uid://w2qnvayqx653"
+next_room_scene = "uid://b4cniyvvquhak"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Door/Mesh/StaticBody3D" unique_id=417043833]
 shape = SubResource("ConvexPolygonShape3D_hbe2o")
