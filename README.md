@@ -64,7 +64,7 @@ Taryn/Bee: Worked on music and wall texture. Ran into some issues while applying
 
 Iteration 6: 
 
-Anna: 
+Anna: I worked on ame win and game loss logic. Hammered out issues with the trivia Ui and questions system, added the textures Bee created to the wall and doors. Add all the questions to the SQLite Database and ensured they couldn't be repeated between rooms.
 
 Francesca: I worked on the menu system, HUD, and game state management. This included the File and Help menus with keyboard shortcuts, a live HUD displaying room progress and heart icons for lives, and the save/load system. I also made sure the maze rooms were transitioning and progressing properly, and that the game over screen only appeared after the player used up all three lives. One challenge I ran into was getting the HUD to update properly in real time.
 
