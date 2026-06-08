@@ -7,6 +7,8 @@
 [ext_resource type="ArrayMesh" uid="uid://cyxglpjgir1v2" path="res://meshlibrary/door.tres" id="4_jckab"]
 [ext_resource type="Script" uid="uid://chw38lrevyef0" path="res://controller/Player.gd" id="5_5qyc1"]
 [ext_resource type="Texture2D" uid="uid://g7kckxuhqq76" path="res://textures/gobbo_bean_texture.png" id="6_u8vtm"]
+[ext_resource type="PackedScene" uid="uid://c45xhifftj6ob" path="res://scenes/MenuUI.tscn" id="8_5qyc1"]
+[ext_resource type="PackedScene" uid="uid://dls2ah18klr3l" path="res://scenes/HUD.tscn" id="9_u8vtm"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_dshv3"]
 points = PackedVector3Array(-0.4999208, -0.98508894, -0.5, 0.4999784, 0.954305, 0.5, 0.5, 0.9543469, -0.48414865, -0.4999208, 0.98508894, -0.5, -0.4840494, -0.954305, 0.5, 0.5, -0.9543469, -0.48414865, -0.4840494, 0.954305, 0.5, 0.4999784, -0.954305, 0.5)
@@ -263,3 +265,7 @@ material = SubResource("StandardMaterial3D_8wac3")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=381891242]
 environment = SubResource("Environment_bqfix")
+
+[node name="MenuUi" parent="." unique_id=1524681550 instance=ExtResource("8_5qyc1")]
+
+[node name="Hud" parent="." unique_id=1131535368 instance=ExtResource("9_u8vtm")]

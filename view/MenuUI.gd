@@ -79,6 +79,7 @@ func _save_game():
 
 func _load_game():
 	GameState.load_game()
+	get_tree().change_scene_to_file("res://scenes/room_" + str(GameState.curRoom + 1) + ".tscn")
 
 func _on_exit_confirmed():
 	get_tree().quit()

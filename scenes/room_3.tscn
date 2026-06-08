@@ -7,6 +7,8 @@
 [ext_resource type="Script" uid="uid://u70jldm8mgg3" path="res://model/Door.gd" id="4_y78up"]
 [ext_resource type="Script" uid="uid://chw38lrevyef0" path="res://controller/Player.gd" id="5_ovtde"]
 [ext_resource type="Texture2D" uid="uid://g7kckxuhqq76" path="res://textures/gobbo_bean_texture.png" id="6_m0s70"]
+[ext_resource type="PackedScene" uid="uid://dls2ah18klr3l" path="res://scenes/HUD.tscn" id="8_ovtde"]
+[ext_resource type="PackedScene" uid="uid://c45xhifftj6ob" path="res://scenes/MenuUI.tscn" id="9_m0s70"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_y78up"]
 points = PackedVector3Array(-0.4999208, -0.98508894, -0.5, 0.4999784, 0.954305, 0.5, 0.5, 0.9543469, -0.48414865, -0.4999208, 0.98508894, -0.5, -0.4840494, -0.954305, 0.5, 0.5, -0.9543469, -0.48414865, -0.4840494, 0.954305, 0.5, 0.4999784, -0.954305, 0.5)
@@ -32,7 +34,7 @@ albedo_color = Color(0.40784314, 0.21960784, 0.7490196, 1)
 background_mode = 1
 background_color = Color(0.23221323, 0.16603392, 0.35289204, 1)
 
-[node name="Node" type="Node" unique_id=1253266844]
+[node name="Room 3" type="Node" unique_id=1253266844]
 
 [node name="GridMap" type="GridMap" parent="." unique_id=1276986077]
 mesh_library = ExtResource("1_yvqia")
@@ -249,3 +251,7 @@ material = SubResource("StandardMaterial3D_1bltn")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=327747197]
 environment = SubResource("Environment_y78up")
+
+[node name="Hud" parent="." unique_id=1131535368 instance=ExtResource("8_ovtde")]
+
+[node name="MenuUi" parent="." unique_id=1524681550 instance=ExtResource("9_m0s70")]

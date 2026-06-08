@@ -7,8 +7,6 @@
 [ext_resource type="Script" uid="uid://6c6a8eouaqu8" path="res://view/TriviaUI.gd" id="5_0akh5"]
 [ext_resource type="ArrayMesh" uid="uid://cyxglpjgir1v2" path="res://meshlibrary/door.tres" id="6_3wwl0"]
 [ext_resource type="Script" uid="uid://ynni1c8rclvu" path="res://view/InteractUI.gd" id="6_d0u7m"]
-[ext_resource type="PackedScene" uid="uid://dls2ah18klr3l" path="res://scenes/HUD.tscn" id="8_wy464"]
-[ext_resource type="PackedScene" uid="uid://c45xhifftj6ob" path="res://scenes/MenuUI.tscn" id="9_4wlnl"]
 
 [sub_resource type="Environment" id="Environment_0akh5"]
 background_mode = 1
@@ -258,7 +256,3 @@ next_room_scene = "uid://w2qnvayqx653"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Door/Mesh/StaticBody3D" unique_id=1833250687]
 shape = SubResource("ConvexPolygonShape3D_0akh5")
-
-[node name="Hud" parent="." unique_id=1131535368 instance=ExtResource("8_wy464")]
-
-[node name="MenuUi" parent="." unique_id=1524681550 instance=ExtResource("9_4wlnl")]

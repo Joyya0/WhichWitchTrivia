@@ -2,6 +2,31 @@
 
 [ext_resource type="Script" uid="uid://vvyyyi6lgvi4" path="res://view/StartScreen.gd" id="1_tx5wa"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tx5wa"]
+bg_color = Color(0.2, 0, 0.3019608, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.8, 0.4, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o7i0r"]
+bg_color = Color(0.4, 0, 0.6, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.8, 0.4, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
 [node name="StartScreen" type="Control" unique_id=1731190967]
 layout_mode = 3
 anchors_preset = 0
@@ -47,11 +72,34 @@ text = "	Traverse the maze and answer
 	the witch's riddles to escape!"
 horizontal_alignment = 1
 
-[node name="StartLabel" type="Label" parent="." unique_id=1705132234]
-layout_mode = 0
-offset_left = 508.0
-offset_top = 459.0
-offset_right = 744.0
-offset_bottom = 490.0
-theme_override_font_sizes/font_size = 22
-text = "Press any key to begin"
+[node name="StartButton" type="Button" parent="." unique_id=2098420326]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 510.0
+offset_top = 317.0
+offset_right = 740.5
+offset_bottom = 363.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_tx5wa")
+theme_override_styles/hover = SubResource("StyleBoxFlat_o7i0r")
+text = "START GAME"
+
+[node name="LoadButton" type="Button" parent="." unique_id=1285517250]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 510.0
+offset_top = 425.0
+offset_right = 740.5
+offset_bottom = 471.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_tx5wa")
+theme_override_styles/hover = SubResource("StyleBoxFlat_o7i0r")
+text = "LOAD GAME"

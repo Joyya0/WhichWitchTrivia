@@ -7,6 +7,8 @@
 [ext_resource type="Script" uid="uid://ynni1c8rclvu" path="res://view/InteractUI.gd" id="5_guunk"]
 [ext_resource type="ArrayMesh" uid="uid://cyxglpjgir1v2" path="res://meshlibrary/door.tres" id="6_flmds"]
 [ext_resource type="Script" uid="uid://u70jldm8mgg3" path="res://model/Door.gd" id="6_u14ju"]
+[ext_resource type="PackedScene" uid="uid://c45xhifftj6ob" path="res://scenes/MenuUI.tscn" id="8_guunk"]
+[ext_resource type="PackedScene" uid="uid://dls2ah18klr3l" path="res://scenes/HUD.tscn" id="9_u14ju"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_flmds"]
 albedo_color = Color(0.32506025, 0.53838396, 0.7169085, 1)
@@ -254,3 +256,7 @@ next_room_scene = "uid://b4cniyvvquhak"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Door/Mesh/StaticBody3D" unique_id=417043833]
 shape = SubResource("ConvexPolygonShape3D_hbe2o")
+
+[node name="MenuUi" parent="." unique_id=1524681550 instance=ExtResource("8_guunk")]
+
+[node name="Hud" parent="." unique_id=1131535368 instance=ExtResource("9_u14ju")]
