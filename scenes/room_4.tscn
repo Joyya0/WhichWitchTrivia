@@ -3,16 +3,10 @@
 [ext_resource type="MeshLibrary" uid="uid://7pxjyfqjvbbs" path="res://meshlibrary/meshlibrary.meshlib" id="1_ccapj"]
 [ext_resource type="Script" uid="uid://6c6a8eouaqu8" path="res://view/TriviaUI.gd" id="2_5d4n5"]
 [ext_resource type="Script" uid="uid://ynni1c8rclvu" path="res://view/InteractUI.gd" id="3_6eqho"]
+[ext_resource type="ArrayMesh" uid="uid://cyxglpjgir1v2" path="res://meshlibrary/door.tres" id="4_1sfdy"]
 [ext_resource type="Script" uid="uid://u70jldm8mgg3" path="res://model/Door.gd" id="4_5d4n5"]
 [ext_resource type="Script" uid="uid://chw38lrevyef0" path="res://controller/Player.gd" id="5_o8owr"]
 [ext_resource type="Texture2D" uid="uid://g7kckxuhqq76" path="res://textures/gobbo_bean_texture.png" id="6_1sfdy"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6eqho"]
-albedo_color = Color(0.5307964, 0.26066008, 0.32758093, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_6eqho"]
-material = SubResource("StandardMaterial3D_6eqho")
-size = Vector3(1, 2, 1)
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_o8owr"]
 points = PackedVector3Array(-0.4999208, -0.98508894, -0.5, 0.4999784, 0.954305, 0.5, 0.5, 0.9543469, -0.48414865, -0.4999208, 0.98508894, -0.5, -0.4840494, -0.954305, 0.5, 0.5, -0.9543469, -0.48414865, -0.4840494, 0.954305, 0.5, 0.4999784, -0.954305, 0.5)
@@ -214,7 +208,7 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 6.99
 
 [node name="Mesh" type="MeshInstance3D" parent="Door" unique_id=1705583477]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, -3.75, -9.509999)
-mesh = SubResource("BoxMesh_6eqho")
+mesh = ExtResource("4_1sfdy")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Door/Mesh" unique_id=636316140]
 script = ExtResource("4_5d4n5")

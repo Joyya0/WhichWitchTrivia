@@ -2,17 +2,11 @@
 
 [ext_resource type="MeshLibrary" uid="uid://7pxjyfqjvbbs" path="res://meshlibrary/meshlibrary.meshlib" id="1_ct5gj"]
 [ext_resource type="Script" uid="uid://6c6a8eouaqu8" path="res://view/TriviaUI.gd" id="2_pd1t7"]
+[ext_resource type="ArrayMesh" uid="uid://cyxglpjgir1v2" path="res://meshlibrary/door.tres" id="3_sh8yd"]
 [ext_resource type="Script" uid="uid://ynni1c8rclvu" path="res://view/InteractUI.gd" id="3_vbud4"]
 [ext_resource type="Script" uid="uid://u70jldm8mgg3" path="res://model/Door.gd" id="4_sh8yd"]
 [ext_resource type="Script" uid="uid://chw38lrevyef0" path="res://controller/Player.gd" id="5_5foij"]
 [ext_resource type="Texture2D" uid="uid://g7kckxuhqq76" path="res://textures/gobbo_bean_texture.png" id="6_mqkto"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pd1t7"]
-albedo_color = Color(0.5307964, 0.26066008, 0.32758093, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_fmcxs"]
-material = SubResource("StandardMaterial3D_pd1t7")
-size = Vector3(1, 2, 1)
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_13u40"]
 points = PackedVector3Array(-0.4999208, -0.98508894, -0.5, 0.4999784, 0.954305, 0.5, 0.5, 0.9543469, -0.48414865, -0.4999208, 0.98508894, -0.5, -0.4840494, -0.954305, 0.5, 0.5, -0.9543469, -0.48414865, -0.4840494, 0.954305, 0.5, 0.4999784, -0.954305, 0.5)
@@ -206,7 +200,7 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 18.8
 
 [node name="Mesh" type="MeshInstance3D" parent="Door" unique_id=692956010]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.430006, -3.76, -9.559994)
-mesh = SubResource("BoxMesh_fmcxs")
+mesh = ExtResource("3_sh8yd")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Door/Mesh" unique_id=1695779391]
 script = ExtResource("4_sh8yd")
@@ -261,7 +255,7 @@ transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -18.
 
 [node name="Mesh" type="MeshInstance3D" parent="Door2" unique_id=1549575714]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.430005, -3.77, -9.729994)
-mesh = SubResource("BoxMesh_fmcxs")
+mesh = ExtResource("3_sh8yd")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Door2/Mesh" unique_id=1364475945]
 script = ExtResource("4_sh8yd")

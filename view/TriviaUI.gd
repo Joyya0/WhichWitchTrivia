@@ -97,6 +97,8 @@ func answer_selected(index):
 	if selected_answer.to_lower() == str(current_question["answer"]).to_lower():
 
 		print("Correct!")
+		GameState.advanceRoom()
+		
 
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
@@ -116,7 +118,8 @@ func answer_selected_tf(selected_answer):
 	if selected_answer.to_lower() == str(current_question["answer"]).to_lower():
 
 		print("Correct!")
-
+		GameState.advanceRoom()
+		
 		var player = get_tree().get_first_node_in_group("player")
 
 		if player:
@@ -135,6 +138,7 @@ func submit_short_answer():
 	if user_answer.to_lower() == str(current_question["answer"]).to_lower():
 
 		print("Correct!")
+		GameState.advanceRoom()
 
 		var player = get_tree().get_first_node_in_group("player")
 
@@ -148,13 +152,9 @@ func submit_short_answer():
 		wrong_answer_selected()
 
 func wrong_answer_selected():
-
-	door_count -= 1
-
-	if door_count <= 0:
-
+	GameState.loseLife()
+	if GameState.playerLives <= 0:
 		get_tree().change_scene_to_file("res://scenes/GameOver.tscn")
-
 	else:
-
-		question_label.text = "Incorrect! This door is now locked."
+		await get_tree().create_timer(2.0).timeout
+		question_label.text = current_question["question"]
