@@ -1,0 +1,262 @@
+[gd_scene format=3 uid="uid://w2qnvayqx653"]
+
+[ext_resource type="MeshLibrary" uid="uid://7pxjyfqjvbbs" path="res://meshlibrary/meshlibrary.meshlib" id="1_63qte"]
+[ext_resource type="Script" uid="uid://chw38lrevyef0" path="res://controller/Player.gd" id="2_63qte"]
+[ext_resource type="Texture2D" uid="uid://g7kckxuhqq76" path="res://textures/gobbo_bean_texture.png" id="3_flmds"]
+[ext_resource type="Script" uid="uid://6c6a8eouaqu8" path="res://view/TriviaUI.gd" id="4_hbe2o"]
+[ext_resource type="Script" uid="uid://ynni1c8rclvu" path="res://view/InteractUI.gd" id="5_guunk"]
+[ext_resource type="ArrayMesh" uid="uid://cyxglpjgir1v2" path="res://meshlibrary/door.tres" id="6_flmds"]
+[ext_resource type="Script" uid="uid://u70jldm8mgg3" path="res://model/Door.gd" id="6_u14ju"]
+[ext_resource type="PackedScene" uid="uid://c45xhifftj6ob" path="res://scenes/MenuUI.tscn" id="8_guunk"]
+[ext_resource type="PackedScene" uid="uid://dls2ah18klr3l" path="res://scenes/HUD.tscn" id="9_u14ju"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_flmds"]
+albedo_color = Color(0.32506025, 0.53838396, 0.7169085, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_flmds"]
+material = SubResource("StandardMaterial3D_flmds")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hbe2o"]
+albedo_texture = ExtResource("3_flmds")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_guunk"]
+points = PackedVector3Array(-0.12520654, -0.532801, -0.4805069, 0.022783129, 0.4760704, 0.49888408, 0.16971254, 0.5591441, 0.46417162, 0.23105091, -0.8035912, 0.32045516, 0.40741014, 0.651043, -0.24352328, -0.4827893, 0.59484255, 0.082213186, -0.3628679, -0.68231165, 0.2896967, 0.46904355, -0.65452886, -0.06627126, -0.12744367, 0.8427015, -0.33810276, -0.39343542, -0.6839421, -0.24471663, 0.43825462, 0.62330925, 0.20084947, 0.0841477, 0.977454, 0.11479468, -0.06820232, -0.9764576, -0.12927033, 0.20054972, -0.56312895, -0.4514544, -0.18552664, 0.59545326, -0.4534751, -0.27336287, 0.59226835, 0.40775412, -0.0069364863, -0.47682306, 0.49966025, 0.37582088, -0.5886136, 0.31695515, 0.111579016, 0.5630594, -0.48117727, -0.41725034, 0.5278656, -0.27049688, -0.48454633, -0.59697217, -0.06650971, -0.27974695, 0.90856135, 0.05333608, -0.25019687, -0.8807117, 0.20531891, 0.263647, -0.90277094, -0.1273943, 0.29336792, 0.8715263, -0.15719566, 0.3734115, -0.5263189, -0.32824618, 0.4996626, 0.47664148, -0.0068885577, 0.053105574, 0.8750009, 0.32470253, -0.15454252, -0.5908538, 0.4658794, -0.09727988, -0.7823577, -0.39818847, -0.3876489, -0.49817133, 0.31564978, -0.30067965, -0.58799505, -0.38890144)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u14ju"]
+vertex_color_use_as_albedo = true
+vertex_color_is_srgb = true
+albedo_color = Color(0.40784314, 0.21960784, 0.7490196, 1)
+
+[sub_resource type="Environment" id="Environment_h8145"]
+background_mode = 1
+background_color = Color(0.23221323, 0.16603392, 0.35289204, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_hbe2o"]
+points = PackedVector3Array(-0.4999208, -0.98508894, -0.5, 0.4999784, 0.954305, 0.5, 0.5, 0.9543469, -0.48414865, -0.4999208, 0.98508894, -0.5, -0.4840494, -0.954305, 0.5, 0.5, -0.9543469, -0.48414865, -0.4840494, 0.954305, 0.5, 0.4999784, -0.954305, 0.5)
+
+[node name="Room2" type="Node" unique_id=400199147]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=338344300]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="GridMap" type="GridMap" parent="." unique_id=1734734923]
+mesh_library = ExtResource("1_63qte")
+cell_size = Vector3(1, 1.5, 1)
+data = {
+"cells": PackedInt32Array(-131082, 65526, 0, -131082, 65527, 0, -131082, 65528, 0, -131082, 65529, 0, -131082, 65530, 0, -131082, 65531, 0, -131082, 65532, 0, -131082, 65533, 0, -131082, 65534, 0, -131082, 65535, 0, -131082, 0, 0, -131082, 1, 0, -131082, 2, 0, -131082, 3, 0, -131082, 4, 0, -131082, 5, 0, -131082, 6, 0, -131082, 7, 0, -131082, 8, 0, -131082, 9, 0, -131081, 9, 0, -131080, 9, 0, -131079, 9, 0, -131078, 9, 0, -131077, 9, 0, -131076, 9, 0, -131075, 9, 0, -131074, 9, 0, -131073, 9, 0, -196608, 9, 0, -196607, 9, 0, -196606, 9, 0, -196605, 9, 0, -196604, 9, 0, -196603, 9, 0, -196602, 9, 0, -196601, 9, 0, -196600, 9, 0, -196599, 9, 0, -196599, 65526, 0, -196599, 65527, 0, -196599, 65528, 0, -196599, 65529, 0, -196599, 65530, 0, -196599, 65531, 0, -196599, 65532, 0, -196599, 65533, 0, -196599, 65534, 0, -196599, 65535, 0, -196599, 0, 0, -196599, 1, 0, -196599, 2, 0, -196599, 3, 0, -196599, 4, 0, -196599, 5, 0, -196599, 6, 0, -196599, 7, 0, -196599, 8, 0, -131081, 65526, 0, -131079, 65526, 0, -131078, 65526, 0, -131077, 65526, 0, -131076, 65526, 0, -131075, 65526, 0, -131074, 65526, 0, -131073, 65526, 0, -196608, 65526, 0, -196607, 65526, 0, -196606, 65526, 0, -196605, 65526, 0, -196600, 65526, 0, -196601, 65526, 0, -196602, 65526, 0, -196603, 65526, 0, -196604, 65526, 0, -131079, 65527, 0, -131079, 65528, 0, -131079, 65529, 0, -131079, 65532, 0, -131079, 65533, 0, -131079, 65534, 0, -131079, 65535, 0, -131079, 0, 0, -131079, 3, 0, -131079, 4, 0, -131079, 5, 0, -131079, 6, 0, -131078, 6, 0, -131077, 6, 0, -131076, 6, 0, -131073, 6, 0, -196608, 6, 0, -196607, 6, 0, -196602, 6, 0, -196603, 6, 0, -196604, 6, 0, -196602, 5, 0, -196602, 4, 0, -196602, 3, 0, -196602, 0, 0, -196602, 65535, 0, -131076, 65527, 0, -131076, 65528, 0, -131076, 65529, 0, -131076, 65530, 0, -131076, 65531, 0, -131076, 65532, 0, -131076, 0, 0, -131076, 1, 0, -131076, 2, 0, -131076, 3, 0, -196604, 65527, 0, -196604, 65528, 0, -196604, 65529, 0, -196604, 65530, 0, -196600, 65529, 0, -196601, 65529, 0, -196604, 65531, 0, -196607, 5, 0, -196607, 4, 0, -196607, 3, 0, -196607, 2, 0, -196607, 1, 0, -196607, 0, 0, -196603, 3, 0, -196604, 3, 0, -131075, 3, 0, -131074, 3, 0, -131073, 3, 0, -196608, 3, 0, -196608, 0, 0, -131073, 0, 0, -131073, 65529, 0, -196608, 65529, 0, -196607, 65529, 0, -131073, 65530, 0, -131073, 65531, 0, -131073, 65532, 0, -196608, 65532, 0, -196607, 65532, 0, -196603, 65535, 0, -196604, 65535, 0, -196602, 65534, 0, -196607, 65535, 0, -131078, 65532, 0, -131077, 65532, 0, -131073, 7, 0, -131073, 8, 0, -196601, 0, 0, -196600, 0, 0, -196607, 65527, 0, -196607, 65528, 0, -131080, 3, 0, -131081, 3, 0, -196601, 5, 0, -196600, 5, 0, -131076, 65535, 0)
+}
+metadata/_editor_floor_ = Vector3(0, -3, 0)
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1618178522]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8299994, -0.65999997, -3.31)
+script = ExtResource("2_63qte")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D" unique_id=1078841860]
+transform = Transform3D(-0.2954423, 0, 0.052094486, 0, 0.29999998, 0, -0.052094486, 0, -0.2954423, 0, -3.7999997, -1.92)
+mesh = SubResource("CapsuleMesh_flmds")
+surface_material_override/0 = SubResource("StandardMaterial3D_hbe2o")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=304695140]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, -3.7999997, -1.92)
+shape = SubResource("ConvexPolygonShape3D_guunk")
+
+[node name="Neck" type="Node3D" parent="CharacterBody3D" unique_id=526104460]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.6, -1.92)
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Neck" unique_id=1672714672]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.100000024, 0, -0.12000036, 0.01999998)
+fov = 64.68749
+
+[node name="RayCast3D" type="RayCast3D" parent="CharacterBody3D/Neck/Camera3D" unique_id=705132423]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.13999999)
+target_position = Vector3(0, 0, -4)
+
+[node name="TriviaUI" type="CanvasLayer" parent="." unique_id=959754624]
+script = ExtResource("4_hbe2o")
+
+[node name="Panel" type="Panel" parent="TriviaUI" unique_id=2046549866]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -125.0
+offset_right = 250.0
+offset_bottom = 125.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="MCContainer" type="Label" parent="TriviaUI/Panel" unique_id=6864148]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 19.0
+offset_right = 20.0
+offset_bottom = 59.0
+grow_horizontal = 2
+autowrap_mode = 3
+
+[node name="Answer1" type="Button" parent="TriviaUI/Panel/MCContainer" unique_id=1998025921]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = 91.0
+offset_right = -142.0
+offset_bottom = 99.0
+grow_vertical = 2
+
+[node name="Answer2" type="Button" parent="TriviaUI/Panel/MCContainer" unique_id=2001376310]
+layout_mode = 0
+offset_left = -150.0
+offset_top = 142.5
+offset_right = -142.0
+offset_bottom = 150.5
+
+[node name="Answer3" type="Button" parent="TriviaUI/Panel/MCContainer" unique_id=69632599]
+layout_mode = 0
+offset_left = -150.0
+offset_top = 181.0
+offset_right = -142.0
+offset_bottom = 189.0
+
+[node name="TFContainer" type="Label" parent="TriviaUI/Panel" unique_id=2101956206]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 19.0
+offset_right = 20.0
+offset_bottom = 59.0
+grow_horizontal = 2
+autowrap_mode = 3
+
+[node name="True" type="Button" parent="TriviaUI/Panel/TFContainer" unique_id=475950562]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -22.0
+offset_top = 113.0
+offset_right = 23.0
+offset_bottom = 99.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 13
+text = "True"
+
+[node name="False" type="Button" parent="TriviaUI/Panel/TFContainer" unique_id=253379305]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -21.0
+offset_top = 152.0
+offset_right = 24.0
+offset_bottom = 138.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 13
+text = "False"
+
+[node name="SAContainer" type="Label" parent="TriviaUI/Panel" unique_id=1933841134]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 19.0
+offset_right = 20.0
+offset_bottom = 59.0
+grow_horizontal = 2
+autowrap_mode = 3
+
+[node name="textbox" type="LineEdit" parent="TriviaUI/Panel/SAContainer" unique_id=1532931606]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = 108.0
+offset_right = 50.0
+offset_bottom = 138.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 10
+placeholder_text = "Enter Answer Here"
+
+[node name="QuestionLabel" type="Label" parent="TriviaUI/Panel" unique_id=1715378792]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -200.0
+offset_top = 28.0
+offset_right = 200.0
+offset_bottom = 51.0
+grow_horizontal = 2
+autowrap_mode = 3
+
+[node name="InteractLabel" type="CanvasLayer" parent="." unique_id=855057256]
+script = ExtResource("5_guunk")
+
+[node name="Panel" type="Panel" parent="InteractLabel" unique_id=1786570194]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="InteractLabel/Panel" unique_id=1546535049]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -20.0
+offset_right = 110.0
+offset_bottom = 20.0
+grow_vertical = 2
+text = "Press 'E'"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Floor" type="CSGBox3D" parent="." unique_id=296620957]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0)
+use_collision = true
+size = Vector3(20, 0.5, 20)
+material = SubResource("StandardMaterial3D_u14ju")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=627911547]
+environment = SubResource("Environment_h8145")
+
+[node name="Door" type="Node3D" parent="." unique_id=293556601]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.0199995, 0, 0)
+
+[node name="Mesh" type="MeshInstance3D" parent="Door" unique_id=186150793]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5001297, -3.7471027, -9.488627)
+mesh = ExtResource("6_flmds")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Door/Mesh" unique_id=1883627974]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0001296997, -0.0028972626, -0.021371841)
+script = ExtResource("6_u14ju")
+next_room_scene = "uid://b4cniyvvquhak"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Door/Mesh/StaticBody3D" unique_id=417043833]
+shape = SubResource("ConvexPolygonShape3D_hbe2o")
+
+[node name="MenuUi" parent="." unique_id=1524681550 instance=ExtResource("8_guunk")]
+
+[node name="Hud" parent="." unique_id=1131535368 instance=ExtResource("9_u14ju")]

@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dryj8u2flxxym"]
+
+[ext_resource type="Script" uid="uid://cidc74x8o3u3e" path="res://GameOver.gd" id="1_qae0b"]
+[ext_resource type="Texture2D" uid="uid://plqchtjf64w1" path="res://scenes/gameover.png" id="2_qae0b"]
+
+[node name="GameOver" type="Control" unique_id=2077048385]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qae0b")
+
+[node name="Gameover" type="Sprite2D" parent="." unique_id=148879845]
+position = Vector2(633.00006, 333.00003)
+scale = Vector2(0.66901034, 0.7064816)
+texture = ExtResource("2_qae0b")
+
+[node name="Button" type="Button" parent="." unique_id=1207439638]
+layout_mode = 0
+offset_left = 501.0
+offset_top = 629.0
+offset_right = 682.0
+offset_bottom = 686.0
+theme_override_colors/font_color = Color(0.90533507, 0.9053352, 0.90533507, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 35
+text = "Restart"

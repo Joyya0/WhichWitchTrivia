@@ -1,0 +1,45 @@
+[gd_resource type="ArrayMesh" format=4 uid="uid://cyxglpjgir1v2"]
+
+[ext_resource type="Texture2D" uid="uid://dgmo0ysl7o864" path="res://textures/textured_door_doorTexture.png" id="1_5d3ef"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_khtd6"]
+resource_name = "Material.001"
+cull_mode = 2
+albedo_color = Color(0, 0, 0, 1)
+metallic = 1.0
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_operator = 1
+emission_texture = ExtResource("1_5d3ef")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_gqivq"]
+_surfaces = [{
+"aabb": AABB(-0.5, -1, -0.5, 1, 2, 1),
+"format": 34896613377,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAACAAMABAACAAEAAwACAAQABQABAAAABQAAAAMABQAGAAEABAABAAYABQADAAcAAwAEAAcABwAGAAUABwAEAAYA"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAAAAP//AAAAAP////8AAP///////wAA//8AAP//AAD/////AAAAAAAAAAAAAAAAAAD//wAAAAD//wAAAAAAAA==")
+}]
+blend_shape_mode = 0
+
+[resource]
+resource_name = "textured_door_Wall"
+_surfaces = [{
+"aabb": AABB(-0.5, -1, -0.5, 1, 2, 1),
+"attribute_data": PackedByteArray("wz8CwMM/4j/Tf+I/038CwNN/AsDTf+I/wz/iP8M/AsD8f/6//H8vQBVAL0AVQP6/NIL+vzSCL0Abwi9AG8L+vxZ5TQgWeUw7F0ZMOxdGTQhxQGr+cUAMv89/DL/Pf2r+"),
+"format": 34896613399,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAACAAMABAAFAAYABAAGAAcACAAJAAoACAAKAAsADAANAA4ADAAOAA8AEAARABIAEAASABMAFAAVABYAFAAWABcA"),
+"material": SubResource("StandardMaterial3D_khtd6"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AAAAAP//AIAAAP////8AgP///////wCA//8AAP//AID//wAAAAAAAP////8AAAAAAAD//wAAAAAAAAAAAAAAAP//AAD//wAA////////AAD/////AAAAAP//AAAAAAAAAAAAAAAA/78AAP//AAD/vwAA//////+/AAAAAP///7//////AAD/v/////////+/AAD//////78AAP//AAD/vwAAAAAAAP+/AAAAAP///7///wAA////v///AAAAAP+//3////9/////f////3///////3////9/////f////3//v/9//7//f/+//3//v/9//3////9/////f////3///////3////9/////f////38AAP9/AAD/fwAA/38AAP9/")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_gqivq")
