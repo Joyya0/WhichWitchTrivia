@@ -61,3 +61,13 @@ Worked on trivia UI to ensure the questions/answers appear correctly which is st
 Francesca: Worked on the menu UI and created the gd script for it, also created the File and Help buttons. Finished updating the rest of the maze rooms. 
 
 Taryn/Bee: Worked on music and wall texture. Ran into some issues while applying textures but actual texture is finalized.
+
+Iteration 6: 
+
+Anna: 
+
+Francesca: I worked on the menu system, HUD, and game state management. This included the File and Help menus with keyboard shortcuts, a live HUD displaying room progress and heart icons for lives, and the save/load system. I also made sure the maze rooms were transitioning and progressing properly, and that the game over screen only appeared after the player used up all three lives. One challenge I ran into was getting the HUD to update properly in real time.
+
+Bee: 
+
+
