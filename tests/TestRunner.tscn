@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bntx1tmwhj1g8"]
+
+[ext_resource type="Script" uid="uid://bgc0hon4re5ck" path="res://tests/TestGameState.gd" id="1_11hne"]
+[ext_resource type="Script" uid="uid://lhh5bxvvpyxi" path="res://tests/TestDoor.gd" id="2_3tpjj"]
+[ext_resource type="Script" uid="uid://dl7dyb65rl228" path="res://tests/TestRoom.gd" id="3_s6q8q"]
+
+[node name="TestRunner" type="Node2D" unique_id=1261193158]
+
+[node name="TestGameState" type="Node" parent="." unique_id=1548142754]
+script = ExtResource("1_11hne")
+
+[node name="TestDoor" type="Node" parent="." unique_id=1972175697]
+script = ExtResource("2_3tpjj")
+
+[node name="TestRoom" type="Node" parent="." unique_id=718430971]
+script = ExtResource("3_s6q8q")
